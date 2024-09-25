@@ -1,0 +1,156 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+  }
+  
+  body {
+    background-color: #f5efff;
+    color: #333;
+  }
+  
+  /* Header */
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 25px;
+    background-color: white; /* Blue */
+    color: #a594f9;
+    border-bottom: 0px solid black; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  
+  .logo {
+    font-size: 1.5em;
+    font-weight: bold;
+  }
+  
+  /* Search Bar Styling */
+.search-bar {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+  
+  .search-bar input {
+    padding: 10px 12px 8px 40px; 
+    width: 700px;
+    border: 2px solid #a594f9; 
+    border-radius: 4px;
+  }
+  
+  .search-icon {
+    position: absolute;
+    left: 10px; 
+    font-size: 1.2em;
+    color: #e6def1; 
+    cursor: pointer;
+    transition: color 0.3s ease, transform 0.3s ease; 
+  }
+  
+  .search-icon:hover {
+    color: #a594f9; 
+    transform: scale(1.2); 
+  }
+  
+  .nav-links {
+    display: flex;
+    gap: 20px; 
+  }
+
+  .nav-links a {
+    display: flex;
+    color: #a594f9;
+    margin-left: 20px;
+    text-decoration: none;
+    font-size: 1em;
+    transition: color 0.3s ease, transform 0.3s ease; 
+  }
+
+  .nav-links i {
+    margin-right: 8px; /* Space between icon and text */
+    font-size: 1.1em;
+  }
+  
+  .nav-links a:hover {
+    transform: scale(1.2); 
+  }
+  
+  
+  /* Main Content */
+  main {
+    padding: 20px;
+  }
+  
+  .banner {
+    text-align: center;
+    padding: 40px 40px;
+    background-color: #a594f9; /* Black */
+    color: white;
+  }
+  
+  .categories {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 35px;
+    background-color: white;
+  }
+  
+  .category-card {
+    text-align: center;
+    border: 0px solid #ccc;
+    padding: 10px;
+    border-radius: 8px;
+    width: 100px;
+  }
+  
+  .category-card img {
+    width: 100%;
+    border-radius: 8px;
+  }
+  
+  .category-card h3 {
+    margin-top: 20px;
+
+    color: #a594f9; /* Blue */
+  }
+  
+  /* Footer */
+.footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #a594f9; 
+    color: white;
+    text-align: left;
+  }
+  
+  .footer-column {
+    flex: 10%; /* Flexible width with min size */
+    margin: 10px;
+    min-width: 150px;
+  }
+  
+  .footer-column h4 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    color: white; 
+  }
+  
+  .footer-column p {
+    font-size: 0.9em;
+    color: #ccc; 
+  }
+  
+  @media (max-width: 768px) {
+    .footer-column {
+      flex: 1 1 100%; 
+      margin: 10px 0;
+    }
+  }
+  
+  
