@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Ifrah'z</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -24,6 +25,7 @@
 </header>
 
   <!-- Category Cards Section -->
+  <main>
   <section class="categories">
     <div class="category-card">
       <img src="https://source.unsplash.com/random/200x200?electronics" alt="Electronics">
@@ -42,16 +44,35 @@
       <h3>Beauty, Toys & More</h3>
     </div>
   </section>
+  </main>
 
 
 
   <!-- Main Content -->
-  <main>
-    <!-- Banner Section -->
+  <!-- <main>
     <section class="banner">
       <h1>Welcome to Ifrah'z</h1>
       <p>Products at best Deal</p>
     </section>
+    </main> -->
+
+    <main>
+
+      <div class="swiper">
+
+  <div class="swiper-wrapper">
+
+    <div class="swiper-slide"><img src="ad1.jpeg" alt="Advertisement 1"></div>
+    <div class="swiper-slide"><img src="ad4.jpeg" alt="Advertisement 2"></div>
+  </div>
+
+  <div class="swiper-pagination"></div>
+
+  <div class="swiper-button-prev"></div>
+  <div class="swiper-button-next"></div>
+
+  
+</div>
   </main>
 
     
@@ -87,8 +108,9 @@
       <p>123 Business St, Suite 100, City, Country.</p>
     </div>
   </footer>
-  
-  
 
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <script src = "script.js"></script>
 </body>
 </html>
