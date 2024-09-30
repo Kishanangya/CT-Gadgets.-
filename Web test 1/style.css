@@ -15,7 +15,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 25px;
+  padding: 25px 25px;
   background-color: white; 
   color: #5d3587;
   border-bottom: 0px solid black; 
@@ -90,30 +90,26 @@ body {
 
 /* Main Content */
 main {
-  padding: 10px;
+  padding: 20px;
 }
 
-.banner {
-  text-align: center;
-  padding: 40px 40px;
-  background-color: #5d3587; 
-  color: white;
-}
 
 .categories {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
+  gap: 50px;
   margin-top: 15px;
-  height: 150px;
+  height: 10px;
   background-color: white;
 }
 
 .category-card {
   text-align: center;
-  border: 0px solid #ccc;
+  border:  0px solid #ccc;
   padding: 10px;
-  border-radius: 8px;
-  width: 100px;
+  border-radius: 0px;
+  width: 700px;
+  height: 10px;
   transition: color 0.3s ease, transform 0.3s ease; 
 }
 
@@ -253,7 +249,7 @@ grid-row: span 1;
 
 .swiper {
   width: 100%; 
-  height: 300px; 
+  height: 100%; 
 }
 
 .swiper-wrapper {
@@ -269,7 +265,7 @@ grid-row: span 1;
 
 .swiper-slide img {
   width: 100%; 
-  height: 350px; 
+  height: 100%; 
   object-fit: fill;
 }  
 
