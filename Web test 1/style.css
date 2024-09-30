@@ -306,3 +306,94 @@ grid-row: span 1;
   background-color: #5d3587; 
   opacity: 1;
 }
+
+
+
+
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px; 
+  width: 100%; 
+  max-width: 100%; 
+  background-color: white;
+  padding: 40px;
+  border-radius: 0px;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+}
+
+.block {
+  flex: 1;
+  padding: 20px;
+  background-color: white;
+  border-radius: 0px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.create-account {
+  background-color: rgba(255, 255, 255, 0.651);
+}
+
+.login {
+  background-color: rgba(255, 255, 255, 0.651);
+}
+
+h2 {
+  margin-bottom: 20px;
+  color: #5d3587;
+  text-align: center;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 14px;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  font-size: 14px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+input:focus {
+  border-color: #5d3587;
+  outline: none;
+}
+
+.btn {
+  width: 100%;
+  padding: 10px;
+  background-color: #5d3587;
+  color: white;
+  font-size: 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #3e2164;
+}
+
+.message {
+  color: red;
+  font-size: 14px;
+  text-align: center;
+  margin-top: 10px;
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    gap: 20px; 
+  }
+}
