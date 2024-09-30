@@ -61,6 +61,28 @@ body {
   gap: 20px; 
 }
 
+.nav-names {
+  display: flex;
+  gap: 20px; 
+  justify-content: center;
+  margin-top: 10px; 
+}
+
+.nav-names a{
+  display: flex;
+  color: #5d3587;
+  margin-left: 20px;
+  text-decoration: none;
+  font-size: 1.12em;
+  font-weight: bold;
+  margin-top: 25px;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.nav-names a:hover{
+  transform: scale(1.2);
+}
+
 .nav-links a {
   display: flex;
   color: #5d3587;
