@@ -6,7 +6,7 @@
 }
 
 body {
-  background-color: white
+  background-color: white;
   color: #333;
 }
 
@@ -79,6 +79,14 @@ body {
   transform: scale(1.2); 
 }
 
+/* Collage section styling */
+.fashion-collage {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 8px; /* Adjust the gap between the items */
+  padding: 0px; /* Reduced padding */
+}
 
 /* Main Content */
 main {
