@@ -161,8 +161,8 @@ main {
 display: grid;
 grid-template-columns: repeat(4, 1fr);
 grid-template-rows: repeat(2, 1fr);
-gap: 8px; /* Adjust the gap between the items */
-padding: 0px; /* Reduced padding */
+gap: 20px; /* Adjust the gap between the items */
+padding: 25px; /* Reduced padding */
 }
 
 .fashion-card {
@@ -179,18 +179,19 @@ border-radius: 0px; /* Slightly reduced border radius */
 
 .fashion-card h3 {
 position: absolute;
-bottom: 8px;
-left: 8px;
+bottom: 200px;
+left: 200px;
 color: white;
-background-color: rgba(0, 0, 0, 0.5);
+background-color: rgba(0, 0, 0, 0.101);
 padding: 5px 8px;
 border-radius: 0%;
+font-size: 80px;
 }
 
 /* Adjust sizes for collage effect */
 .fashion-card.large {
-grid-column: span 2;
-grid-row: span 2;
+grid-column: span 0.5;
+grid-row: span 0.5;
 }
 
 .fashion-card.medium {
