@@ -159,83 +159,74 @@ main {
 /* Collage section styling */
 .fashion-collage {
   display: grid;
-  grid-template-columns: repeat(4, 1fr); /* Reduced width for smaller images */
-  grid-template-rows: repeat(2, 0.5fr); /* Reduced height for smaller images */
-  gap: 10px; /* Reduce the gap between the items */
-  padding: 2px; /* Adjust the padding */
-  border: 1px solid black;
+  justify-content: center; /* Centers the grid horizontally */
+  grid-template-columns: repeat(2, 1fr); /* 2 items per row */
+  grid-auto-rows: 300px; /* Uniform row height */
+  gap: 20px; /* Adjusts the gap between each card */
+  width: fit-content; /* Adjust the width based on content */
+  margin: 0 auto; /* Center the entire grid on the page */
+  padding: 20px;
 }
 
 .fashion-card {
-  position: relative;
+  background-color: white;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
   overflow: hidden;
+  position: relative;
+  width: 350px; /* Set a width */
+  height: 350px; /* Set a height */
 }
 
 .fashion-card img {
   width: 100%;
-  height: 80%; /* Reduced image height */
-  border-radius: 0px; /* No border radius */
+  height: 100%;
   object-fit: cover;
+  border-radius: 10px;
 }
 
 .fashion-card h3 {
   position: absolute;
-  top: 10px;
-  right: 185px;
-  color: rgb(255, 255, 255);
-  background-color: rgba(2, 1, 9, 0.453);
-  padding: 5px 8px;
-  border-radius: 0px;
-  font-size: 30px; /* Reduced font size */
+  bottom: 10px;
+  left: 10px;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 5px;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: bold;
 }
 
-/* Adjust sizes for collage effect */
-.fashion-card.large {
-  grid-column: span 2;
-  grid-row: span 2;
+/* Specific styling for the fifth image container */
+.fashion-card:nth-child(5) {
+  grid-column: span 2; /* Make the fifth container span both columns */
+  justify-self: center; /* Center the container */
+  width: 500px; /* Optional: Adjust width to make it stand out */
+  height: 300px; /* Optional: Adjust height */
 }
-
-.fashion-card.medium {
-  grid-column: span 2;
-  grid-row: span 1;
-}
-
-.fashion-card.small {
-  grid-column: span 1;
-  grid-row: span 1;
-}
-
-
-
 
 /* Responsive design */
 @media (max-width: 768px) {
   .fashion-collage {
     grid-template-columns: repeat(1, 1fr); /* Stacks cards in a single column on smaller screens */
-    grid-auto-rows: 300px; /* Reduces the row height for smaller screens */
+    grid-auto-rows: 200px; /* Reduces the row height for smaller screens */
   }
 
-  .fashion-card img {
-    height: 100%; /* Maintain the full height for images on smaller screens */
+  .fashion-card {
+    width: 200px; /* Adjust card size for smaller screens */
+    height: 200px;
   }
 
-  /* Ensures the fourth and fifth containers don't span two columns on smaller screens */
+  /* Ensures the fifth container doesn't span two columns on smaller screens */
   .fashion-card:nth-child(5) {
     grid-column: span 1;
-  }
-
-
-/* Responsive design */
-@media (max-width: 768px) {
-  .fashion-collage {
-    grid-template-columns: repeat(1, 1fr); /* Stacks cards in a single column on smaller screens */
-    grid-auto-rows: 300px; /* Reduces the row height for smaller screens */
-  }
-
-  .fashion-card img {
-    height: 100%; /* Maintain the full height for images on smaller screens */
+    width: 200px;
+    height: 200px;
   }
 }
+
+
+
 
 
 
@@ -440,5 +431,4 @@ input:focus {
     flex-direction: column;
     gap: 20px; 
   }
-}
 }
