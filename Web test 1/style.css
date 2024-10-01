@@ -15,7 +15,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 25px 25px;
+  padding: 35px 35px;
   background-color: #045471; 
   color: #ffffff;
   border-bottom: 0px solid black; 
@@ -46,7 +46,7 @@ body {
   position: absolute;
   left: 10px; 
   font-size: 1.2em;
-  color: #392467; 
+  color: #045471; 
   cursor: pointer;
   transition: color 0.3s ease, transform 0.3s ease; 
 }
@@ -116,7 +116,7 @@ main {
 }
 
 
-.categories {
+/* .categories {
   display: flex;
   justify-content: center;
   gap: 50px;
@@ -154,7 +154,7 @@ main {
   color: #045471;
   margin-left: 20px;
   text-decoration: none;
-}
+} */
 
 /* Collage section styling */
 .fashion-collage {
@@ -210,27 +210,33 @@ main {
 
 /* Responsive design */
 @media (max-width: 768px) {
-.fashion-collage {
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: auto;
-}
+  .fashion-collage {
+    grid-template-columns: repeat(1, 1fr); /* Stacks cards in a single column on smaller screens */
+    grid-auto-rows: 300px; /* Reduces the row height for smaller screens */
+  }
 
-.fashion-card.large, .fashion-card.medium {
-  grid-column: span 2;
-}
-}
+  .fashion-card img {
+    height: 100%; /* Maintain the full height for images on smaller screens */
+  }
+
+  /* Ensures the fourth and fifth containers don't span two columns on smaller screens */
+  .fashion-card:nth-child(5) {
+    grid-column: span 1;
+  }
+
 
 /* Responsive design */
 @media (max-width: 768px) {
-.fashion-collage {
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: auto;
+  .fashion-collage {
+    grid-template-columns: repeat(1, 1fr); /* Stacks cards in a single column on smaller screens */
+    grid-auto-rows: 300px; /* Reduces the row height for smaller screens */
+  }
+
+  .fashion-card img {
+    height: 100%; /* Maintain the full height for images on smaller screens */
+  }
 }
 
-.fashion-card.large, .fashion-card.medium {
-  grid-column: span 2;
-}
-}
 
 
 
@@ -330,7 +336,7 @@ main {
 }  
 
 .swiper .swiper-button-prev, .swiper .swiper-button-next{
-  color: #5d3587;
+  color: #045471;
 }
 
 .swiper-pagination-bullet {
@@ -341,7 +347,7 @@ main {
 }
 
 .swiper-pagination-bullet-active {
-  background-color: #5d3587; 
+  background-color: #045471; 
   opacity: 1;
 }
 
@@ -380,7 +386,7 @@ main {
 
 h2 {
   margin-bottom: 20px;
-  color: #5d3587;
+  color: #045471;
   text-align: center;
 }
 
@@ -403,14 +409,14 @@ input {
 }
 
 input:focus {
-  border-color: #5d3587;
+  border-color: #045471;
   outline: none;
 }
 
 .btn {
   width: 100%;
   padding: 10px;
-  background-color: #5d3587;
+  background-color: #045471;
   color: white;
   font-size: 16px;
   border: none;
@@ -419,7 +425,7 @@ input:focus {
 }
 
 .btn:hover {
-  background-color: #3e2164;
+  background-color: #045471;
 }
 
 .message {

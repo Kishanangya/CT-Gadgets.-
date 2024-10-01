@@ -1,82 +1,105 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
-  }
-  
-  body {
-    background-color: #ffe5e5;
-    color: #333;
-  }
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
 
-  .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 25px;
-    background-color: white; 
-    color: #5d3587;
-    border-bottom: 0px solid black; 
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  }
-  
-  
-  .logo {
-    font-size: 1.5em;
-    font-weight: bold;
-  }
-  
-  /* Search Bar Styling */
+body {
+  background-color: white;
+  color: #333;
+}
+
+/* Header */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 35px 35px;
+  background-color: #045471; 
+  color: #ffffff;
+  border-bottom: 0px solid black; 
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+
+.logo {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+/* Search Bar Styling */
 .search-bar {
-    position: relative;
-    display: flex;
-    align-items: center;
-  }
-  
-  .search-bar input {
-    padding: 10px 12px 8px 40px; 
-    width: 700px;
-    border: 2px solid #5d3587; 
-    border-radius: 4px;
-  }
-  
-  .search-icon {
-    position: absolute;
-    left: 10px; 
-    font-size: 1.2em;
-    color: #392467; 
-    cursor: pointer;
-    transition: color 0.3s ease, transform 0.3s ease; 
-  }
-  
-  .search-icon:hover {
-    color: #5d3587; 
-    transform: scale(1.2); 
-  }
-  
-  .nav-links {
-    display: flex;
-    gap: 20px; 
-  }
+  position: relative;
+  display: flex;
+  align-items: center;
+}
 
-  .nav-links a {
-    display: flex;
-    color: #5d3587;
-    margin-left: 20px;
-    text-decoration: none;
-    font-size: 1em;
-    transition: color 0.3s ease, transform 0.3s ease; 
-  }
+.search-bar input {
+  padding: 10px 12px 8px 40px; 
+  width: 700px;
+  border: 2px solid #ffffff; 
+  border-radius: 4px;
+}
 
-  .nav-links i {
-    margin-right: 8px; /* Space between icon and text */
-    font-size: 1.1em;
-  }
-  
-  .nav-links a:hover {
-    transform: scale(1.2); 
-  }
+.search-icon {
+  position: absolute;
+  left: 10px; 
+  font-size: 1.2em;
+  color: #045471; 
+  cursor: pointer;
+  transition: color 0.3s ease, transform 0.3s ease; 
+}
+
+.search-icon:hover {
+  color: #ffffff; 
+  transform: scale(1.2); 
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px; 
+}
+
+.nav-names {
+  display: flex;
+  gap: 20px; 
+  justify-content: center;
+  margin-top: 10px; 
+}
+
+.nav-names a{
+  display: flex;
+  color: #ffffff;
+  margin-left: 20px;
+  text-decoration: none;
+  font-size: 1.12em;
+  font-weight: bold;
+  margin-top: 25px;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.nav-names a:hover{
+  transform: scale(1.2);
+}
+
+.nav-links a {
+  display: flex;
+  color: #ffffff;
+  margin-left: 20px;
+  text-decoration: none;
+  font-size: 1em;
+  transition: color 0.3s ease, transform 0.3s ease; 
+}
+
+.nav-links i {
+  margin-right: 8px; /* Space between icon and text */
+  font-size: 1.1em;
+}
+
+.nav-links a:hover {
+  transform: scale(1.2); 
+}
 
 /* Style for login page */
 body {
@@ -143,7 +166,7 @@ body {
 }
 
 .login-btn {
-    background-color: #5d3587;
+    background-color: #045471;
     color: white;
     border: none;
     padding: 10px 20px;
@@ -154,7 +177,7 @@ body {
 }
 
 .login-btn:hover {
-    background-color: #3e2164;
+    background-color: #045471;
 }
 
 .extra-links {
@@ -228,8 +251,8 @@ body {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    padding: 20px;
-    background-color: #5d3587; 
+    padding: 150px;
+    background-color: #045471; 
     color: white;
     text-align: left;
   }
@@ -282,7 +305,7 @@ body {
   }  
 
   .swiper .swiper-button-prev, .swiper .swiper-button-next{
-    color: #5d3587;
+    color: #045471;
   }
 
   .swiper-pagination-bullet {
@@ -293,6 +316,6 @@ body {
   }
   
   .swiper-pagination-bullet-active {
-    background-color: #5d3587; 
+    background-color: #045471; 
     opacity: 1;
   }
