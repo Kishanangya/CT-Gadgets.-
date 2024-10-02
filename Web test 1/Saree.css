@@ -103,15 +103,15 @@ body {
 
 /*Content Styling*/
 
-product-container {
+.product-container  {
   display: flex;
   flex-direction: row; /* Aligns items horizontally */
-  justify-content: space-around;
+  justify-content:left;
   align-items: center; /* Vertically centers items */
   padding: 30px;
   background-color: rgb(255, 255, 255);
   gap: 50px;
-  border: 50%;
+  border: 0;
 }
 
 .product {
