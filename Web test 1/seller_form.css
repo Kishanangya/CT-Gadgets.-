@@ -1,0 +1,103 @@
+/* General styling */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+/* Container */
+.container {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    background: url('path_to_your_background_image.jpg') no-repeat center center;
+    background-size: cover;
+}
+
+/* Header Styling */
+.header {
+    text-align: center;
+    padding: 2rem;
+    background-color: #045471;
+    color: #fff;
+    width: 100%;
+}
+
+.header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.header p {
+    font-size: 1.2rem;
+}
+
+/* Form Section */
+.form-section {
+    width: 80%;
+    margin: 2rem 0;
+}
+
+/* Footer Styling */
+.footer {
+    background-color: #045471;
+    padding: 3rem;
+    text-align: center;
+}
+
+.footer-heading {
+    font-size: 2rem;
+    color: #fff;
+    margin-bottom: 2rem;
+}
+
+.footer-benefits {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.benefit-item {
+    background-color: #045471;
+    border: 0px solid #ddd;
+    border-radius: 10px;
+    padding: 1.5rem;
+    width: 250px;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.benefit-item h3 {
+    font-size: 1.2rem;
+    margin-top: 1rem;
+    color: #fff;
+}
+
+.benefit-item p {
+    font-size: 0.95rem;
+    color: #fff;
+    margin-top: 0.5rem;
+}
+
+.benefit-icon {
+    width: 50px;
+    height: 50px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .footer-benefits {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .benefit-item {
+        width: 80%;
+        margin-bottom: 1rem;
+    }
+}
