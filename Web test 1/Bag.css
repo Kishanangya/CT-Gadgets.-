@@ -104,14 +104,15 @@
   /*Container Pack*/
  
 .product-container  {
-  display: flex;
+  display:flex;
   flex-direction: row; /* Aligns items horizontally */
-  justify-content:left;
-  align-items: center; /* Vertically centers items */
+  justify-content:center;
+  align-items: auto; /* Vertically centers items */
   padding: 30px;
   background-color: rgb(255, 255, 255);
   gap: 50px;
   border: 0;
+  flex-wrap: wrap;
 }
 
 .product {
