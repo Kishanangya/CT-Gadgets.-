@@ -28,6 +28,11 @@ body {
   font-weight: bold;
 }
 
+.logo a{
+  color: #fff;
+  text-decoration: none;
+}
+
 /* Search Bar Styling */
 .search-bar {
   position: relative;
