@@ -107,7 +107,7 @@ body {
   display: flex;
   flex-direction: row; /* Aligns items horizontally */
   justify-content:left;
-  align-items: left; /* Vertically centers items */
+  align-items: center; /* Vertically centers items */
   padding: 30px;
   background-color: rgb(255, 255, 255);
   gap: 50px;
