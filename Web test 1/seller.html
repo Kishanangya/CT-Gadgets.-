@@ -11,7 +11,9 @@
 <body>
     <!-- Header Section -->
     <header class="header">
-        <div class="header-logo">Ifrah'z</div>
+        <div class="header-logo">
+            <a href="index.html">Ifrah'z</a>
+          </div>
         <nav class="nav-menu">
             <a href="#">Sell Online</a>
             <a href="#">How it Works</a>
@@ -19,16 +21,28 @@
             <a href="#">Shipping & Returns</a>
             <a href="#">Grow Business</a>
             <a href="#">Don't have GST?</a>
-            <form action="seller_login.html" method="POST">
-                <button type="submit" class="login-btn">Login</button>
-            </form>
+            
+            <button class="login-btn" onclick="openLoginForm()">Login</button>
+
             <form action="seller_form.html" method="GET">
                 <button type="submit" class="sell-btn">Start Selling</button>
             </form>
-            
-
         </nav>
     </header>
+
+    <!-- Login Form Modal -->
+    <div class="login-form-container" id="loginForm">
+        <span class="close-btn" onclick="closeLoginForm()">&times;</span>
+        <h2>Login</h2>
+        <form action="login_process.html" method="POST">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+            <button type="submit" class="submit-btn">Login</button>
+        </form><br>
+        <p>Don't have an account? <br><br><a href="seller_form.html">Register for a new account</a></p>
+    </div>
 
     <!-- Main Promotional Section -->
     <section class="promo-section">
@@ -37,14 +51,11 @@
                 <h1>Sell online to millions of customers.</h1>
                 <p>Become an IFRAH'Z seller and grow your business across India. 
                 </p>
-                <!-- <div class="promo-input">
-                    <input type="tel" placeholder="+91 Enter Your Mobile Number">
-                    <button class="start-selling-btn">Start Selling</button>
-                </div> -->
             </div>
         </div>
     </section>
 
+    <!-- How It Works Section -->
     <section class="how-it-works-section">
         <h2>How It Works</h2>
         <div class="steps-container">
@@ -75,7 +86,7 @@
         </div>
     </section>
 
-
+    <!-- Footer Section -->
     <footer class="footer">
         <div class="footer-container">
             <div class="footer-left">
@@ -113,6 +124,21 @@
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <!-- JavaScript to Control Modal -->
+    <script>
+        function openLoginForm() {
+            document.getElementById("loginForm").style.display = "block";
+            document.querySelectorAll("body > *:not(.login-form-container)").forEach(element => {
+                element.classList.add("blur-background");
+            });
+        }
+        
+        function closeLoginForm() {
+            document.getElementById("loginForm").style.display = "none";
+            document.querySelectorAll("body > *:not(.login-form-container)").forEach(element => {
+                element.classList.remove("blur-background");
+            });
+        }
+    </script>
 </body>
 </html>
