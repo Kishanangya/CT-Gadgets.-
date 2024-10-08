@@ -60,6 +60,11 @@
     </div>
     
     <!-- Background Script -->
-    <script src="script.js"></script>
+    <script>
+        function onFormSubmitSuccess(userName) {
+            window.location.href = `dashboard.html?name=${encodeURIComponent(userName)}`;
+        }
+        
+    </script>
 </body>
 </html>

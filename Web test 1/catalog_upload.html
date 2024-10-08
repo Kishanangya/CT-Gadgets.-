@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catalog Upload</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="catalog_upload.css">
+</head>
+<body>
+
+<div class="container">
+    <div class="step-indicator">
+        <button id="selectCategoryBtn" class="step-btn active">1. Select Category</button>
+        <button id="addProductDetailsBtn" class="step-btn">2. Add Product Details</button>
+    </div>
+    
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <!-- Category Search and Navigation -->
+        <div class="category-section">
+            <div class="search-container">
+                <!-- <i class="fas fa-search search-icon"></i>  -->
+                <input type="text" id="searchCategory" placeholder="Search for products, brands and more" class="search-bar">
+            </div>
+            
+            <div class="category-list">
+                <div class="main-category">
+                    <h3>Categories</h3>
+                    <ul>
+                        <li class="category-item">Sarees</li>
+                        <li class="category-item">Handbag</li>
+                        <li class="category-item">Combos</li>
+                        <li class="category-item">Tops & T-Shirts</li>
+                        <li class="category-item">Electronics</li>                     
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Display the selected category name -->
+        <div class="selected-category">
+            <h3>Selected Category: <span id="selectedCategoryName">None</span></h3>
+        </div>
+
+        <!-- Upload Section and Guidelines -->
+        <div class="upload-section">
+            <div class="upload-box">
+                <input type="file" id="imageUploadInput" style="display: none;" accept="image/*" multiple>
+
+                <button id="addImagesButton" class="upload-btn">Add Product Images</button>
+                
+                <div class="image-preview-container" id="imagePreviewContainer"></div>
+
+                <button id="ProceedButton" class="proceed-btn"> Proceed </button>
+
+                <div class="guidelines">
+                    <p>Please provide only front image for each product.</p>
+                    <center><button class="follow-guidelines-btn">Follow Guidelines to Reduce Quality Check Failure</button></center>
+                </div>
+
+                <div class="general-guidelines">
+                    <h4>General Guidelines</h4>
+                    <ul>
+                        <li>You can add a minimum of 1 and maximum of 9 products to create a catalog.</li>
+                        <li>Upload the products from the same category that you have chosen.</li>
+                    </ul>
+                </div>
+
+                <div class="image-guidelines">
+                    <h4>Image Guidelines</h4>
+                    <ul>
+                        <li>Images with text/watermark are not acceptable in primary images.</li>
+                        <li>Product images should not have any text.</li>
+                        <li>Please add solo product images without any props.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    // Get all category items
+    const categoryItems = document.querySelectorAll('.category-item');
+    const selectedCategoryName = document.getElementById('selectedCategoryName');
+
+    // Add click event listeners to each category item
+    categoryItems.forEach(item => {
+        item.addEventListener('click', function() {
+            const categoryName = this.textContent;
+            selectedCategoryName.textContent = categoryName;
+        });
+    });
+
+    // Trigger file upload on button click
+    document.getElementById('addImagesButton').addEventListener('click', function() {
+        document.getElementById('imageUploadInput').click(); // Opens the system's file explorer
+    });
+
+    // Handle file selection and preview the images
+    document.getElementById('imageUploadInput').addEventListener('change', function(event) {
+        const files = event.target.files;
+
+        // Check if more than 9 files are selected
+        if (files.length > 9) {
+            alert("You can only upload a maximum of 9 images.");
+            event.target.value = ''; // Clear the input
+            return; // Stop further execution
+        }
+
+        const previewContainer = document.getElementById('imagePreviewContainer');
+        
+        // Clear any existing previews
+        previewContainer.innerHTML = '';
+
+        // Loop through each selected file and create image previews
+        Array.from(files).forEach((file, index) => {
+            const reader = new FileReader();
+            reader.onload = function(e) {
+                // Create a div to hold the image and remove button
+                const previewDiv = document.createElement('div');
+                previewDiv.classList.add('image-preview');
+
+                // Create the image element
+                const img = document.createElement('img');
+                img.src = e.target.result;
+                img.alt = `Image Preview ${index + 1}`;
+
+                // Create a remove button
+                const removeBtn = document.createElement('button');
+                removeBtn.textContent = 'x';
+                removeBtn.classList.add('remove-btn');
+                removeBtn.addEventListener('click', function() {
+                    previewContainer.removeChild(previewDiv);
+                });
+
+                // Append image and remove button to the preview div
+                previewDiv.appendChild(img);
+                previewDiv.appendChild(removeBtn);
+
+                // Add the preview div to the container
+                previewContainer.appendChild(previewDiv);
+            };
+
+            // Read the file as a data URL
+            reader.readAsDataURL(file);
+        });
+    });
+
+    document.getElementById('ProceedButton').addEventListener('click', function() {
+        window.location.href = 'product_details.html'; 
+    });
+
+    document.getElementById('selectCategoryBtn').addEventListener('click', function() {
+        window.location.href = 'catalog_upload.html'; 
+    });
+
+    document.getElementById('addProductDetailsBtn').addEventListener('click', function() {
+        window.location.href = 'product_details.html'; 
+    });
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Supplier Dashboard</title>
+    <link rel="stylesheet" href="catalog.css">
+    
+</head>
+<body>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <h3>Supplier Hub</h3>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#">Orders</a></li>
+            <li><a href="#">Returns</a></li>
+            <li><a href="#">Inventory</a></li>
+            <li><a href="#">Payments</a></li>
+            <li><a href="#">Catalog Uploads</a></li>
+            <li><a href="#">Advertisements</a></li>
+            <li><a href="#">Promotions</a></li>
+        </ul>
+    </div>
+
+    <!-- Main Dashboard Content -->
+    <div class="main-content">
+        <!-- Welcome Box -->
+        <div class="welcome-box">
+            <h2>Welcome <span id="user-name">!!</span></h2>
+            <p>Let’s get your business started</p>
+            <button class="select-categories-btn">Select Categories</button>
+        </div>
+
+        <section class="dashboard-section">
+            <div class="dashboard-overlay">
+                <div class="dashboard-content">
+                    <h2>Welcome <span id="user-name">!!</span> </h2>
+                    <p>Let’s get your business started. Upload your catalog to reach millions of customers.</p>
+                    <button class="dashboard-button" id="uploadButton">Upload Catalog</button>
+                </div>
+            </div>
+        </section>
+
+        <div class="footer-links">
+            <h4>Useful Links</h4>
+            <a href="#">Prepare catalogs for IFRAH'Z</a>
+            <a href="#">Pricing & Commission</a>
+            <a href="#">Delivery & Returns</a>
+        </div>
+    </div>
+
+    <div class="overlay" id="modalOverlay"></div>
+
+    <div class="modal" id="categoriesModal">
+        <h3>Select a Category</h3>
+        <ul>
+            <li><a href="#">Sarees</a></li>
+            <li><a href="#">Handbag</a></li>
+            <li><a href="#">Combos</a></li>            
+            <li><a href="#">Tops & T-Shirts</a></li>
+            <li><a href="#">Electronics</a></li>
+        </ul>
+        <button class="close-modal" id="closeModal">Close</button>
+    </div>
+
+    <script>
+        // Fetch the user's name from the URL parameter and display it
+        window.onload = function() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const userName = urlParams.get('name');
+            if (userName) {
+                document.getElementById('user-name').innerText = userName + " Store";
+            }
+        };
+
+        // Get elements
+        const selectCategoriesBtn = document.querySelector('.select-categories-btn');
+        const categoriesModal = document.getElementById('categoriesModal');
+        const modalOverlay = document.getElementById('modalOverlay');
+        const mainContent = document.querySelector('.main-content');
+
+        // Open Modal and apply blur effect only to background (main-content)
+        selectCategoriesBtn.addEventListener('click', () => {
+            categoriesModal.style.display = 'block';
+            modalOverlay.style.display = 'block';
+            mainContent.classList.add('blur');
+        });
+
+        // Close Modal and remove blur effect
+        document.getElementById('closeModal').addEventListener('click', () => {
+            categoriesModal.style.display = 'none';
+            modalOverlay.style.display = 'none';
+            mainContent.classList.remove('blur');
+        });
+
+        // Close modal if overlay is clicked
+        modalOverlay.addEventListener('click', () => {
+            categoriesModal.style.display = 'none';
+            modalOverlay.style.display = 'none';
+            mainContent.classList.remove('blur');
+        });
+    </script>
+</body>
+</html>
