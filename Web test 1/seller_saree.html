@@ -1,0 +1,788 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ifrah'z</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="seller_saree.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <div class="main-content">
+    <!-- Welcome Box -->
+    <div class="welcome-box">
+        <h2>Welcome <span id="user-name">!!</span></h2>
+        <p>Let’s get your business started</p>
+        <button class="select-categories-btn">Select Categories</button>
+    </div>
+  </div>
+    <div class="overlay" id="modalOverlay"></div>
+
+    <div class="modal" id="categoriesModal">
+        <h3>Select a Category</h3>
+        <ul>
+            <li><button onclick="navigateToPage('seller_saree.html')">Sarees</button></li>
+            <li><button onclick="navigateToPage('Bag.html')">Handbag</button></li>
+            <li><button onclick="navigateToPage('Combo.html')">Combos</button></li>
+            <li><button onclick="navigateToPage('#')">Tops & T-Shirts</button></li>
+            <li><button onclick="navigateToPage('Electronic.html')">Electronics</button></li>
+        </ul>
+        <button class="close-modal" id="closeModal">Close</button>
+    </div>
+
+
+    <section class="promo-section">
+        <div class="promo-overlay">
+            <div class="promo-content">
+                <h1>Purchase from IFRAH'Z and Sell to Millions of Customers.</h1>
+                <p>Become an IFRAH'Z seller and grow your business across India. 
+                </p>
+            </div>
+        </div>
+    </section>
+
+     <!-- Add this section for the cart preview -->
+     <!-- <div id="cartPreview"></div>
+     <div id="cartTotal"></div>     
+<div id="cartPreview">
+  <h3>Cart Preview</h3>
+  <div id="cartItems"></div>
+  <button id="confirmPurchase">Confirm Purchase</button>
+</div> -->
+
+    
+
+
+  <!--Saree Content are here-->   
+  <main>
+    <!-- Product Container to wrap all product cards -->
+    <div class="product-container">
+
+        <!-- Product 1 -->
+        <div class="product" >
+            <img src="Product Images/Saree/Single Saree/Saree 1.jpg" alt="Product Image 1" class="product-image">
+            <div class="product-details">
+                <h3 class="product-title">Silk Saree</h3>
+                <p class="product-description">Made out of pure silk and mixture of cotton.</p>
+                <div class="product-price">₹1,499<span>₹3,000</span></div>
+                <div class="quantity-selector">
+                    <label for="quantity-1">Quantity (Maximum 10): </label>
+                    <input type="number" id="quantity-1" name="quantity" value="1" min="1" max="100" step="1">
+                </div>
+                <button class="btn add-to-cart buyButton">Buy</button>
+            </div>
+        </div>
+
+        <!-- Product 2 -->
+        <div class="product" data-id="2">
+            <img src="Product Images/Saree/Single Saree/Saree 2.jpg" alt="Product Image 2" class="product-image">
+            <div class="product-details">
+                <h3 class="product-title">Another Product Name</h3>
+                <p class="product-description">This is a brief description of another product.</p>
+                <div class="product-price">₹1,499<span>₹2,000</span></div>
+                <div class="quantity-selector">
+                    <label for="quantity-2">Quantity (Maximum 10): </label>
+                    <input type="number" id="quantity-2" name="quantity" value="1" min="1" max="100" step="1">
+                </div>
+                <button class="btn add-to-cart buyButton">Buy</button>
+            </div>
+        </div>
+
+        <!-- Product 3 -->
+        <div class="product" data-id="3">
+            <img src="Product Images/Saree/Single Saree/Saree 3.jpg" alt="Product Image 3" class="product-image">
+            <div class="product-details">
+                <h3 class="product-title">Another Product Name</h3>
+                <p class="product-description">This is a brief description of another product.</p>
+                <div class="product-price">₹1,699<span>₹2,500</span></div>
+                <div class="quantity-selector">
+                    <label for="quantity-3">Quantity (Maximum 10): </label>
+                    <input type="number" id="quantity-3" name="quantity" value="1" min="1" max="100" step="1">
+                </div>
+                <button class="btn add-to-cart buyButton">Buy</button>
+            </div>
+        </div>
+
+        <!-- Product 4 -->
+        <div class="product" data-id="4">
+            <img src="Product Images/Saree/Single Saree/Saree 4.jpg" alt="Product Image 4" class="product-image">
+            <div class="product-details">
+                <h3 class="product-title">Another Product Name</h3>
+                <p class="product-description">This is a brief description of another product.</p>
+                <div class="product-price">₹1,499<span>₹2,000</span></div>
+                <div class="quantity-selector">
+                    <label for="quantity-4">Quantity (Maximum 10): </label>
+                    <input type="number" id="quantity-4" name="quantity" value="1" min="1" max="100" step="1">
+                </div>
+                <button class="btn add-to-cart buyButton">Buy</button>
+            </div>
+        </div>
+
+        <!-- Product 5 -->
+        <div class="product" data-id="5">
+            <img src="Product Images/Saree/Single Saree/Saree 5.jpg" alt="Product Image 5" class="product-image">
+            <div class="product-details">
+                <h3 class="product-title">Another Product Name</h3>
+                <p class="product-description">This is a brief description of another product.</p>
+                <div class="product-price">₹1,499<span>₹2,000</span></div>
+                <div class="quantity-selector">
+                    <label for="quantity-5">Quantity (Maximum 10): </label>
+                    <input type="number" id="quantity-5" name="quantity" value="1" min="1" max="100" step="1">
+                </div>
+                <button class="btn add-to-cart buyButton">Buy</button>
+            </div>
+        </div>
+
+        <!-- Product 6 -->
+        <div class="product" data-id="6">
+            <img src="Product Images/Saree/Single Saree/Saree 6.jpg" alt="Product Image 6" class="product-image">
+            <div class="product-details">
+                <h3 class="product-title">Another Product Name</h3>
+                <p class="product-description">This is a brief description of another product.</p>
+                <div class="product-price">₹1,499<span>₹2,000</span></div>
+                <div class="quantity-selector">
+                    <label for="quantity-6">Quantity (Maximum 10): </label>
+                    <input type="number" id="quantity-6" name="quantity" value="1" min="1" max="100" step="1">
+                </div>
+                <button class="btn add-to-cart buyButton">Buy</button>
+            </div>
+        </div>
+
+        <!-- Product 7 -->
+        <div class="product" data-id="7">
+            <img src="Product Images/Saree/Single Saree/Saree 7.jpg" alt="Product Image 7" class="product-image">
+            <div class="product-details">
+                <h3 class="product-title">Another Product Name</h3>
+                <p class="product-description">This is a brief description of another product.</p>
+                <div class="product-price">₹1,699<span>₹2,500</span></div>
+                <button class="btn add-to-cart buyButton">Buy</button>
+            </div>
+        </div>
+
+        <!-- Product 8 -->
+        <div class="product" data-id="8">
+            <img src="Product Images/Saree/Single Saree/Saree 8.jpg" alt="Product Image 8" class="product-image">
+            <div class="product-details">
+                <h3 class="product-title">Another Product Name</h3>
+                <p class="product-description">This is a brief description of another product.</p>
+                <div class="product-price">₹1,499<span>₹2,000</span></div>
+                <button class="btn add-to-cart buyButton">Buy</button>
+            </div>
+        </div>
+        
+
+
+      
+
+        <div class="product">
+          <img src="Product Images/Saree/Single Saree/Saree 9.jpg" alt="Product Image 9" class="product-image">
+          <div class="product-details">
+            <h3 class="product-title">Another Product Name</h3>
+            <p class="product-description">This is a brief description of another product.</p>
+            <div class="product-price">₹1,499<span>₹2,000</span>
+             <button class="btn add-to-cart">Buy</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="product">
+          <img src="Product Images/Saree/Single Saree/Saree 10.jpg" alt="Product Image 10" class="product-image">
+          <div class="product-details">
+            <h3 class="product-title">Another Product Name</h3>
+            <p class="product-description">This is a brief description of another product.</p>
+            <div class="product-price">₹1,499<span>₹2,000</span>
+             <button class="btn add-to-cart">Buy</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="product">
+         <img src="Product Images/Saree/Single Saree/Saree 11.jpg" alt="Product Image 11" class="product-image">
+         <div class="product-details">
+           <h3 class="product-title">Another Product Name</h3>
+           <p class="product-description">This is a brief description of another product.</p>
+           <div class="product-price">₹1,699<span>  ₹2,500</span>
+            <button class="btn add-to-cart">Buy</button>
+           </div>
+          </div>
+        </div>
+
+        <div class="product">
+          <img src="Product Images/Saree/Single Saree/Saree 12.jpg" alt="Product Image 12" class="product-image">
+          <div class="product-details">
+            <h3 class="product-title">Another Product Name</h3>
+            <p class="product-description">This is a brief description of another product.</p>
+            <div class="product-price">₹1,499<span>₹2,000</span>
+             <button class="btn add-to-cart">Buy</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="product">
+          <img src="Product Images/Saree/Single Saree/Saree 13.jpg" alt="Product Image 13" class="product-image">
+          <div class="product-details">
+            <h3 class="product-title">Another Product Name</h3>
+            <p class="product-description">This is a brief description of another product.</p>
+            <div class="product-price">₹1,499<span>₹2,000</span>
+             <button class="btn add-to-cart">Buy</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="product">
+          <img src="Product Images/Saree/Single Saree/Saree 14.jpg" alt="Product Image 14" class="product-image">
+          <div class="product-details">
+            <h3 class="product-title">Another Product Name</h3>
+            <p class="product-description">This is a brief description of another product.</p>
+            <div class="product-price">₹1,499<span>₹2,000</span>
+             <button class="btn add-to-cart">Buy</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="product">
+         <img src="Product Images/Saree/Single Saree/Saree 15.jpg" alt="Product Image 15" class="product-image">
+         <div class="product-details">
+           <h3 class="product-title">Another Product Name</h3>
+           <p class="product-description">This is a brief description of another product.</p>
+           <div class="product-price">₹1,699<span>  ₹2,500</span>
+            <button class="btn add-to-cart">Buy</button>
+           </div>
+          </div>
+        </div>
+
+        <div class="product">
+          <img src="Product Images/Saree/Single Saree/Saree 16.jpg" alt="Product Image 16" class="product-image">
+          <div class="product-details">
+            <h3 class="product-title">Another Product Name</h3>
+            <p class="product-description">This is a brief description of another product.</p>
+            <div class="product-price">₹1,499<span>₹2,000</span>
+             <button class="btn add-to-cart">Buy</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="product">
+          <img src="Product Images/Saree/Single Saree/Saree 17.jpg" alt="Product Image 17" class="product-image">
+          <div class="product-details">
+            <h3 class="product-title">Another Product Name</h3>
+            <p class="product-description">This is a brief description of another product.</p>
+            <div class="product-price">₹1,499<span>₹2,000</span>
+             <button class="btn add-to-cart">Buy</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="product">
+          <img src="Product Images/Saree/Single Saree/Saree 18.jpg" alt="Product Image 18" class="product-image">
+          <div class="product-details">
+            <h3 class="product-title">Another Product Name</h3>
+            <p class="product-description">This is a brief description of another product.</p>
+            <div class="product-price">₹1,499<span>₹2,000</span>
+             <button class="btn add-to-cart">Buy</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="product">
+         <img src="Product Images/Saree/Single Saree/Saree 19.jpg" alt="Product Image 19" class="product-image">
+         <div class="product-details">
+           <h3 class="product-title">Another Product Name</h3>
+           <p class="product-description">This is a brief description of another product.</p>
+           <div class="product-price">₹1,699<span>  ₹2,500</span>
+            <button class="btn add-to-cart">Buy</button>
+           </div>
+          </div>
+        </div>
+
+        <div class="product">
+          <img src="Product Images/Saree/Single Saree/Saree 20.jpg" alt="Product Image 20" class="product-image">
+          <div class="product-details">
+            <h3 class="product-title">Another Product Name</h3>
+            <p class="product-description">This is a brief description of another product.</p>
+            <div class="product-price">₹1,499<span>₹2,000</span>
+             <button class="btn add-to-cart">Buy</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="product">
+          <img src="Product Images/Saree/Single Saree/Saree 21.jpg" alt="Product Image 21" class="product-image">
+          <div class="product-details">
+            <h3 class="product-title">Another Product Name</h3>
+            <p class="product-description">This is a brief description of another product.</p>
+            <div class="product-price">₹1,499<span>₹2,000</span>
+             <button class="btn add-to-cart">Buy</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="product">
+          <img src="Product Images/Saree/Single Saree/Saree 22.jpg" alt="Product Image 22" class="product-image">
+          <div class="product-details">
+            <h3 class="product-title">Another Product Name</h3>
+            <p class="product-description">This is a brief description of another product.</p>
+            <div class="product-price">₹1,499<span>₹2,000</span>
+             <button class="btn add-to-cart">Buy</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="product">
+         <img src="Product Images/Saree/Single Saree/Saree 23.jpg" alt="Product Image 23" class="product-image">
+         <div class="product-details">
+           <h3 class="product-title">Another Product Name</h3>
+           <p class="product-description">This is a brief description of another product.</p>
+           <div class="product-price">₹1,699<span>  ₹2,500</span>
+            <button class="btn add-to-cart">Buy</button>
+           </div>
+          </div>
+        </div>
+
+        <div class="product">
+          <img src="Product Images/Saree/Single Saree/Saree 24.jpg" alt="Product Image 24" class="product-image">
+          <div class="product-details">
+            <h3 class="product-title">Another Product Name</h3>
+            <p class="product-description">This is a brief description of another product.</p>
+            <div class="product-price">₹1,499<span>₹2,000</span>
+             <button class="btn add-to-cart">Buy</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="product">
+          <img src="Product Images/Saree/Single Saree/Saree 25.jpg" alt="Product Image 25" class="product-image">
+          <div class="product-details">
+            <h3 class="product-title">Another Product Name</h3>
+            <p class="product-description">This is a brief description of another product.</p>
+            <div class="product-price">₹1,499<span>₹2,000</span>
+             <button class="btn add-to-cart">Buy</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="product">
+          <img src="Product Images/Saree/Single Saree/Saree 26.jpg" alt="Product Image 26" class="product-image">
+          <div class="product-details">
+            <h3 class="product-title">Another Product Name</h3>
+            <p class="product-description">This is a brief description of another product.</p>
+            <div class="product-price">₹1,499<span>₹2,000</span>
+             <button class="btn add-to-cart">Buy</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="product">
+         <img src="Product Images/Saree/Single Saree/Saree 27.jpg" alt="Product Image 27" class="product-image">
+         <div class="product-details">
+           <h3 class="product-title">Another Product Name</h3>
+           <p class="product-description">This is a brief description of another product.</p>
+           <div class="product-price">₹1,699<span>  ₹2,500</span>
+            <button class="btn add-to-cart">Buy</button>
+           </div>
+          </div>
+        </div>
+
+        <div class="product">
+          <img src="Product Images/Saree/Single Saree/Saree 28.jpg" alt="Product Image 28" class="product-image">
+          <div class="product-details">
+            <h3 class="product-title">Another Product Name</h3>
+            <p class="product-description">This is a brief description of another product.</p>
+            <div class="product-price">₹1,499<span>₹2,000</span>
+             <button class="btn add-to-cart">Buy</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="product">
+          <img src="Product Images/Saree/Single Saree/Saree 29.jpg" alt="Product Image 29" class="product-image">
+          <div class="product-details">
+            <h3 class="product-title">Another Product Name</h3>
+            <p class="product-description">This is a brief description of another product.</p>
+            <div class="product-price">₹1,499<span>₹2,000</span>
+             <button class="btn add-to-cart">Buy</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="product">
+          <img src="Product Images/Saree/Single Saree/Saree 30.jpg" alt="Product Image 30" class="product-image">
+          <div class="product-details">
+            <h3 class="product-title">Another Product Name</h3>
+            <p class="product-description">This is a brief description of another product.</p>
+            <div class="product-price">₹1,499<span>₹2,000</span>
+             <button class="btn add-to-cart">Buy</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="product">
+         <img src="Product Images/Saree/Single Saree/Saree 31.jpg" alt="Product Image 31" class="product-image">
+         <div class="product-details">
+           <h3 class="product-title">Another Product Name</h3>
+           <p class="product-description">This is a brief description of another product.</p>
+           <div class="product-price">₹1,699<span>  ₹2,500</span>
+            <button class="btn add-to-cart">Buy</button>
+           </div>
+          </div>
+        </div>
+
+        <div class="product">
+          <img src="Product Images/Saree/Single Saree/Saree 32.jpg" alt="Product Image 32" class="product-image">
+          <div class="product-details">
+            <h3 class="product-title">Another Product Name</h3>
+            <p class="product-description">This is a brief description of another product.</p>
+            <div class="product-price">₹1,499<span>₹2,000</span>
+             <button class="btn add-to-cart">Buy</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="product">
+          <img src="Product Images/Saree/Single Saree/Saree 33.jpg" alt="Product Image 33" class="product-image">
+          <div class="product-details">
+            <h3 class="product-title">Another Product Name</h3>
+            <p class="product-description">This is a brief description of another product.</p>
+            <div class="product-price">₹1,499<span>₹2,000</span>
+             <button class="btn add-to-cart">Buy</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="product">
+          <img src="Product Images/Saree/Single Saree/Saree 34.jpg" alt="Product Image 34" class="product-image">
+          <div class="product-details">
+            <h3 class="product-title">Another Product Name</h3>
+            <p class="product-description">This is a brief description of another product.</p>
+            <div class="product-price">₹1,499<span>₹2,000</span>
+             <button class="btn add-to-cart">Buy</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="product">
+         <img src="Product Images/Saree/Single Saree/Saree 35.jpg" alt="Product Image 35" class="product-image">
+         <div class="product-details">
+           <h3 class="product-title">Another Product Name</h3>
+           <p class="product-description">This is a brief description of another product.</p>
+           <div class="product-price">₹1,699<span>  ₹2,500</span>
+            <button class="btn add-to-cart">Buy</button>
+           </div>
+          </div>
+        </div>
+
+        <div class="product">
+          <img src="Product Images/Saree/Single Saree/Saree 36.jpg" alt="Product Image 36" class="product-image">
+          <div class="product-details">
+            <h3 class="product-title">Another Product Name</h3>
+            <p class="product-description">This is a brief description of another product.</p>
+            <div class="product-price">₹1,499<span>₹2,000</span>
+             <button class="btn add-to-cart">Buy</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="product">
+          <img src="Product Images/Saree/Single Saree/Saree 37.jpg" alt="Product Image 37" class="product-image">
+          <div class="product-details">
+            <h3 class="product-title">Another Product Name</h3>
+            <p class="product-description">This is a brief description of another product.</p>
+            <div class="product-price">₹1,499<span>₹2,000</span>
+             <button class="btn add-to-cart">Buy</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="product">
+          <img src="Product Images/Saree/Single Saree/Saree 38.jpg" alt="Product Image 38" class="product-image">
+          <div class="product-details">
+            <h3 class="product-title">Another Product Name</h3>
+            <p class="product-description">This is a brief description of another product.</p>
+            <div class="product-price">₹1,499<span>₹2,000</span>
+             <button class="btn add-to-cart">Buy</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="product">
+          <img src="Product Images/Saree/Single Saree/Saree 39.jpg" alt="Product Image 39" class="product-image">
+          <div class="product-details">
+            <h3 class="product-title">Another Product Name</h3>
+            <p class="product-description">This is a brief description of another product.</p>
+            <div class="product-price">₹1,499<span>₹2,000</span>
+             <button class="btn add-to-cart">Buy</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="product">
+         <img src="Product Images/Saree/Single Saree/Saree 40.jpg" alt="Product Image 40" class="product-image">
+         <div class="product-details">
+           <h3 class="product-title">Another Product Name</h3>
+           <p class="product-description">This is a brief description of another product.</p>
+           <div class="product-price">₹1,699<span>  ₹2,500</span>
+            <button class="btn add-to-cart">Buy</button>
+           </div>
+          </div>
+        </div>
+
+        <div class="product">
+          <img src="Product Images/Saree/Single Saree/Saree 41.jpg" alt="Product Image 41" class="product-image">
+          <div class="product-details">
+            <h3 class="product-title">Another Product Name</h3>
+            <p class="product-description">This is a brief description of another product.</p>
+            <div class="product-price">₹1,499<span>₹2,000</span>
+             <button class="btn add-to-cart">Buy</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="product">
+          <img src="Product Images/Saree/Single Saree/Saree 42.jpg" alt="Product Image 42" class="product-image">
+          <div class="product-details">
+            <h3 class="product-title">Another Product Name</h3>
+            <p class="product-description">This is a brief description of another product.</p>
+            <div class="product-price">₹1,499<span>₹2,000</span>
+             <button class="btn add-to-cart">Buy</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="product">
+          <img src="Product Images/Saree/Single Saree/Saree 43.jpg" alt="Product Image 43" class="product-image">
+          <div class="product-details">
+            <h3 class="product-title">Another Product Name</h3>
+            <p class="product-description">This is a brief description of another product.</p>
+            <div class="product-price">₹1,499<span>₹2,000</span>
+             <button class="btn add-to-cart">Buy</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="product">
+          <img src="Product Images/Saree/Single Saree/Saree 44.jpg" alt="Product Image 44" class="product-image">
+          <div class="product-details">
+            <h3 class="product-title">Another Product Name</h3>
+            <p class="product-description">This is a brief description of another product.</p>
+            <div class="product-price">₹1,499<span>₹2,000</span>
+             <button class="btn add-to-cart">Buy</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="product">
+         <img src="Product Images/Saree/Single Saree/Saree 45.jpg" alt="Product Image 45" class="product-image">
+         <div class="product-details">
+           <h3 class="product-title">Another Product Name</h3>
+           <p class="product-description">This is a brief description of another product.</p>
+           <div class="product-price">₹1,699<span>  ₹2,500</span>
+            <button class="btn add-to-cart">Buy</button>
+           </div>
+          </div>
+        </div>
+
+        <div class="product">
+          <img src="Product Images/Saree/Single Saree/Saree 46.jpg" alt="Product Image 46" class="product-image">
+          <div class="product-details">
+            <h3 class="product-title">Another Product Name</h3>
+            <p class="product-description">This is a brief description of another product.</p>
+            <div class="product-price">₹1,499<span>₹2,000</span>
+             <button class="btn add-to-cart">Buy</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="product">
+          <img src="Product Images/Saree/Single Saree/Saree 47.jpg" alt="Product Image 47" class="product-image">
+          <div class="product-details">
+            <h3 class="product-title">Another Product Name</h3>
+            <p class="product-description">This is a brief description of another product.</p>
+            <div class="product-price">₹1,499<span>₹2,000</span>
+             <button class="btn add-to-cart">Buy</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="product">
+          <img src="Product Images/Saree/Tissue Print Soft Silk Saree/Soft Silk Saree 1.jpg" alt="Product Image 48" class="product-image">
+          <div class="product-details">
+            <h3 class="product-title">Another Product Name</h3>
+            <p class="product-description">This is a brief description of another product.</p>
+            <div class="product-price">₹1,499<span>₹2,000</span>
+             <button class="btn add-to-cart">Buy</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="product">
+          <img src="Product Images/Saree/Basket Saree/Basket Saree 1.jpg" alt="Product Image 49" class="product-image">
+          <div class="product-details">
+            <h3 class="product-title">Another Product Name</h3>
+            <p class="product-description">This is a brief description of another product.</p>
+            <div class="product-price">₹1,499<span>₹2,000</span>
+             <button class="btn add-to-cart">Buy</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="product">
+          <img src="Product Images/Saree/Tissue Print Soft Silk Saree/Soft Silk Saree 1.jpg" alt="Product Image 50" class="product-image">
+          <div class="product-details">
+            <h3 class="product-title">Another Product Name</h3>
+            <p class="product-description">This is a brief description of another product.</p>
+            <div class="product-price">₹1,499<span>₹2,000</span>
+             <button class="btn add-to-cart">Buy</button>
+            </div>
+          </div>
+        </div>
+    </div>    
+  </main>
+
+ 
+
+  
+    <!-- Footer Section -->
+<footer>
+  <div class="footer-container">
+      <div class="footer-left">
+          <h2>IFRAH'Z</h2>
+          <p>Discover the future of shopping with IFRAH'Z, where innovation meets convenience and style, all at your fingertips.</p>
+      </div>
+
+      <div class="footer-center">
+          <div class="footer-links footer-column">
+              <a href="#">Insight</a>
+              <a href="#">News</a>
+              <a href="#">Careers</a>
+              <a href="#">Services</a>
+          </div>
+          <div class="footer-links footer-column">
+              <a href="#">About Us</a>
+              <a href="#">Contact Us</a>
+              <a href="#">Investors</a>
+              <a href="#">Privacy Notice</a>
+          </div>
+      </div>
+
+      <div class="footer-right">
+          <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3890.412064418029!2d77.59456271481978!3d12.971598991310643!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae1670d0c1f739%3A0xfed9e978b28279bc!2sBengaluru%2C%20Karnataka!5e0!3m2!1sen!2sin!4v1604498705435!5m2!1sen!2sin"
+            width="400" height="300" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+      </div>
+  </div>
+
+  <div class="footer-bottom">
+      <p>© 2024 IFRAH'Z. All rights reserved.</p>
+      <div class="social-links">
+          <a href="#"><i class="fab fa-facebook"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-linkedin"></i></a>
+      </div>
+  </div>
+</footer>
+
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+<script>
+    // Get elements
+    const selectCategoriesBtn = document.querySelector('.select-categories-btn');
+    const categoriesModal = document.getElementById('categoriesModal');
+    const modalOverlay = document.getElementById('modalOverlay');
+    const mainContent = document.querySelector('.main-content');
+
+    // Open Modal and apply blur effect only to background (main-content)
+    selectCategoriesBtn.addEventListener('click', () => {
+        categoriesModal.style.display = 'block';
+        modalOverlay.style.display = 'block';
+        mainContent.classList.add('blur');
+    });
+
+    // Close Modal and remove blur effect
+    document.getElementById('closeModal').addEventListener('click', () => {
+        categoriesModal.style.display = 'none';
+        modalOverlay.style.display = 'none';
+        mainContent.classList.remove('blur');
+    });
+
+    // Close modal if overlay is clicked
+    modalOverlay.addEventListener('click', () => {
+        categoriesModal.style.display = 'none';
+        modalOverlay.style.display = 'none';
+        mainContent.classList.remove('blur');
+    });
+
+    function navigateToPage(url) {
+        window.location.href = url;  // Redirect to the specified URL
+    }
+
+
+
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+document.querySelectorAll('.buyButton').forEach(button => {
+    button.addEventListener('click', function() {
+        const productElement = this.closest('.product'); // Get the current product element
+        const productId = productElement.getAttribute('data-id'); // Get the unique product ID
+        const quantityInput = productElement.querySelector('.quantity-selector input');
+        let quantity = parseInt(quantityInput.value);
+
+        // Ensure the quantity does not exceed the maximum limit
+        if (quantity > 10) {
+            alert("You can only purchase a maximum of 10 items. The quantity will be set to 10.");
+            quantity = 10; // Set quantity to maximum
+            quantityInput.value = 10; // Update the input field value
+        } else if (quantity < 1) {
+            alert("Quantity cannot be less than 1.");
+            quantity = 1; // Set minimum quantity
+            quantityInput.value = 1; // Update the input field value
+        }
+
+        // Extract product details
+        const imageSrc = productElement.querySelector('.product-image').src;
+        const title = productElement.querySelector('.product-title').textContent.trim();
+        const description = productElement.querySelector('.product-description').textContent.trim();
+        const price = parseFloat(productElement.querySelector('.product-price').childNodes[0].textContent.replace(/[^0-9.-]+/g, ''));
+
+        const productDetails = {
+            id: productId, // Use unique product ID
+            imageSrc,
+            title,
+            description,
+            price,
+            quantity
+        };
+
+        // Check if the product is already in the cart based on the unique ID
+        const existingProductIndex = cart.findIndex(item => item.id === productId);
+        if (existingProductIndex > -1) {
+            // Update quantity of existing product
+            cart[existingProductIndex].quantity += quantity;
+            // Cap the quantity of the existing product to 10
+            if (cart[existingProductIndex].quantity > 10) {
+                alert("The quantity for this product has been capped at 10.");
+                cart[existingProductIndex].quantity = 10; // Cap at 10
+            }
+        } else {
+            // Add new product to the cart
+            cart.push(productDetails);
+        }
+
+        // Save the updated cart to localStorage
+        localStorage.setItem('cart', JSON.stringify(cart));
+
+        // Redirect to the orders.html page for previewing the cart
+        window.location.href = 'orders.html'; // Redirect to orders page
+    });
+});
+
+
+
+
+  
+</script>
+</body>
+</html>

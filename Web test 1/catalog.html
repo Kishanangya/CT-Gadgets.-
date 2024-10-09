@@ -14,7 +14,7 @@
         <h3>Supplier Hub</h3>
         <ul>
             <li><a href="index.html">Home</a></li>
-            <li><a href="#">Orders</a></li>
+            <li><a href="orders.html">Orders</a></li>
             <li><a href="#">Returns</a></li>
             <li><a href="#">Inventory</a></li>
             <li><a href="#">Payments</a></li>
@@ -56,11 +56,11 @@
     <div class="modal" id="categoriesModal">
         <h3>Select a Category</h3>
         <ul>
-            <li><a href="#">Sarees</a></li>
-            <li><a href="#">Handbag</a></li>
-            <li><a href="#">Combos</a></li>            
-            <li><a href="#">Tops & T-Shirts</a></li>
-            <li><a href="#">Electronics</a></li>
+            <li><button onclick="navigateToPage('seller_saree.html')">Sarees</button></li>
+            <li><button onclick="navigateToPage('Bag.html')">Handbag</button></li>
+            <li><button onclick="navigateToPage('Combo.html')">Combos</button></li>
+            <li><button onclick="navigateToPage('#')">Tops & T-Shirts</button></li>
+            <li><button onclick="navigateToPage('Electronic.html')">Electronics</button></li>
         </ul>
         <button class="close-modal" id="closeModal">Close</button>
     </div>
@@ -101,6 +101,11 @@
             modalOverlay.style.display = 'none';
             mainContent.classList.remove('blur');
         });
+
+        function navigateToPage(url) {
+            window.location.href = url;  // Redirect to the specified URL
+        }
+
     </script>
 </body>
 </html>
