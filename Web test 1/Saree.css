@@ -6,7 +6,7 @@
 }
 
 body {
-  background-color: white;
+  background-color: #F0EFEB;
   color: #333;
 }
 
@@ -16,7 +16,7 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 35px 35px;
-  background-color: #045471; 
+  background-color: #283618; 
   color: #ffffff;
   border-bottom: 0px solid black; 
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -44,7 +44,7 @@ body {
 .search-bar input {
   padding: 10px 12px 8px 40px; 
   width: 700px;
-  border: 2px solid #ffffff; 
+  border: 2px solid #D4D4D4; 
   border-radius: 4px;
 }
 
@@ -52,7 +52,7 @@ body {
   position: absolute;
   left: 10px; 
   font-size: 1.2em;
-  color: #045471; 
+  color: #283618; 
   cursor: pointer;
   transition: color 0.3s ease, transform 0.3s ease; 
 }
@@ -115,7 +115,7 @@ body {
   justify-content:left;
   align-items: center; /* Vertically centers items */
   padding: 30px;
-  background-color: rgb(255, 255, 255);
+  background-color: #F0EFEB;
   gap: 50px;
   border: 0;
   flex-wrap: wrap;
@@ -157,7 +157,7 @@ body {
 
 .product-price {
   font-size: 1.2em;
-  color: #045471;
+  color: #283618;
   font-weight: bold;
 }
 
@@ -170,7 +170,7 @@ body {
 .btn.add-to-cart {
   display: inline-block;
   padding: 10px 20px;
-  background-color: #045471;
+  background-color: #283618;
   color: white;
   border: none;
   border-radius: 4px;
@@ -198,7 +198,7 @@ body {
 
 /* Footer Section */
 footer {
-  background-color: #045471; 
+  background-color: #283618; 
   color: white;
   padding: 40px 20px;
   position: relative;
@@ -322,7 +322,7 @@ footer {
 
 .swiper {
   width: 100%; 
-  height: 100%; 
+  height: 50%; 
 }
 
 .swiper-wrapper {
@@ -338,8 +338,8 @@ footer {
 
 .swiper-slide img {
   width: 100%; 
-  height: 100%; 
-  object-fit: fill;
+  height: 600px; 
+  object-fit:fill;
 }  
 
 .swiper .swiper-button-prev, .swiper .swiper-button-next{
@@ -357,3 +357,4 @@ footer {
   background-color: #045471; 
   opacity: 1;
 }
+
