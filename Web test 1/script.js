@@ -54,7 +54,17 @@ loginForm.addEventListener('submit', function(event) {
 
 
 
+// Add any interactivity here (e.g., selecting colors or changing images based on color)
+document.querySelectorAll('.color').forEach(color => {
+  color.addEventListener('click', function() {
+      alert("You selected a color!");
+  });
+});
 
+// Placeholder script to add functionality if needed.
+document.querySelector('.shop-btn').addEventListener('click', () => {
+  window.location.href = 'https://www.apple.com/shop'; // Example redirect
+});
 
 
 
