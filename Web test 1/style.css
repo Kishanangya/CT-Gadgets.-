@@ -219,6 +219,7 @@ h1 {
   display: flex;
   flex-direction: column;
   gap: 15px;
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
 }
 
 .product-card:hover {
@@ -248,21 +249,7 @@ h2 a:hover {
 
 
 
-
-
-/* Add this to your style.css file */
-body {
-  background-image: url('images/Saree\ ad.jpg'); /* Replace 'your-image-path.jpg' with the path to your image */
-  background-size: cover; /* Ensures the image covers the entire background */
-  background-position: center; /* Centers the background image */
-  background-attachment: fixed; /* Keeps the image fixed while scrolling */
-  background-repeat: no-repeat; /* Prevents the image from repeating */
-}
-
-
-
-
-
+/* Video css I have given below */
 
 body {
   font-family: Arial, sans-serif;
