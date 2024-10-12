@@ -106,7 +106,16 @@ body {
   transform: scale(1.2); 
 }
 
+.g_id_signin {
+  margin-top: 20px;
+}
 
+.or-divider {
+  margin: 15px 0;
+  font-size: 15px;
+  color: #000;
+  position: relative;
+}
 
 
 

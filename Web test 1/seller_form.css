@@ -101,3 +101,19 @@ body, html {
         margin-bottom: 1rem;
     }
 }
+
+ .sell-btn {
+    background-color: #04729a;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 0px;
+    cursor: pointer;
+    font-size: 17px;
+    transition: color 0.3s ease, transform 0.3s ease; 
+}
+
+ .sell-btn:hover {
+    transform: scale(1.2); 
+    
+}

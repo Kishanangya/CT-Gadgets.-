@@ -1,0 +1,261 @@
+/* General styling */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+/* Container */
+.container {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    background: url('path_to_your_background_image.jpg') no-repeat center center;
+    background-size: cover;
+}
+
+/* Header Styling */
+.header {
+    text-align: center;
+    padding: 2rem;
+    background-color: #045471;
+    color: #fff;
+    width: 100%;
+}
+
+.header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.header p {
+    font-size: 1.2rem;
+}
+
+/* Form Section */
+.form-section {
+    width: 80%;
+    margin: 2rem 0;
+}
+
+/* Footer Styling */
+.footer {
+    background-color: #045471;
+    padding: 3rem;
+    text-align: center;
+}
+
+.footer-heading {
+    font-size: 2rem;
+    color: #fff;
+    margin-bottom: 2rem;
+}
+
+.footer-benefits {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.benefit-item {
+    background-color: #045471;
+    border: 0px solid #ddd;
+    border-radius: 10px;
+    padding: 1.5rem;
+    width: 250px;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.benefit-item h3 {
+    font-size: 1.2rem;
+    margin-top: 1rem;
+    color: #fff;
+}
+
+.benefit-item p {
+    font-size: 0.95rem;
+    color: #fff;
+    margin-top: 0.5rem;
+}
+
+.benefit-icon {
+    width: 50px;
+    height: 50px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .footer-benefits {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .benefit-item {
+        width: 80%;
+        margin-bottom: 1rem;
+    }
+}
+
+ .sell-btn {
+    background-color: #04729a;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 0px;
+    cursor: pointer;
+    font-size: 17px;
+    transition: color 0.3s ease, transform 0.3s ease; 
+}
+
+ .sell-btn:hover {
+    transform: scale(1.2); 
+    
+}
+
+/* General footer styles */
+footer {
+    background-color: #045471;
+    padding: 40px 10%;
+    color: #fff;
+    font-family: Arial, sans-serif;
+    height: 275px;
+}
+
+.partner-logos {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.partner-logos h2 {
+    font-size: 24px;
+    color: #fff;
+}
+
+.partner-logos h2 span {
+    color: #045471;
+}
+
+.logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+
+.logo-container img {
+    max-width: 120px;
+    height: auto;
+}
+
+.footer-main {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid #ddd;
+}
+
+.sitew-section {
+    max-width: 300px;
+}
+
+.sitew-section h2{
+    font-size: 35px;
+}
+
+.sitew-section img {
+    width: 120px;
+    height: auto;
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+  }
+  
+  .social-icons a {
+    color: white;
+    font-size: 25px;
+    text-decoration: none;
+  }
+  
+  .social-icons a:hover {
+    color: #d8a7c3; 
+  }
+
+/* .trustpilot {
+    margin-top: 15px;
+    display: flex;
+    align-items: center;
+} */
+
+/* .trustpilot img {
+    width: 80px;
+    margin-right: 10px;
+} */
+
+.footer-links {
+    display: flex;
+    gap: 40px;
+}
+
+.footer-links .column {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-links h4 {
+    font-size: 19px;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.footer-links a {
+    color: #fff;
+    text-decoration: none;
+    margin-bottom: 8px;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #04729a;
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+.legal-links {
+    display: flex;
+    gap: 15px;
+}
+
+.legal-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.language-selection {
+    display: flex;
+    gap: 5px;
+}
+
+.language-selection img {
+    width: 20px;
+    height: auto;
+}
+
+.footer-bottom p {
+    margin: 0;
+}

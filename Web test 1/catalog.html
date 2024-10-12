@@ -13,7 +13,7 @@
     <div class="sidebar">
         <h3>Supplier Hub</h3>
         <ul>
-            <li><a href="index.html">Home</a></li>
+            <li><a href="seller.html">Home</a></li>
             <li><a href="orders.html">Orders</a></li>
             <li><a href="#">Returns</a></li>
             <li><a href="#">Inventory</a></li>
@@ -57,10 +57,12 @@
         <h3>Select a Category</h3>
         <ul>
             <li><button onclick="navigateToPage('seller_saree.html')">Sarees</button></li>
-            <li><button onclick="navigateToPage('Bag.html')">Handbag</button></li>
-            <li><button onclick="navigateToPage('Combo.html')">Combos</button></li>
-            <li><button onclick="navigateToPage('#')">Tops & T-Shirts</button></li>
-            <li><button onclick="navigateToPage('Electronic.html')">Electronics</button></li>
+            <li><button onclick="navigateToPage('seller_bags.html')">Handbags</button></li>
+            <li><button onclick="navigateToPage('seller_combo.html')">Combos</button></li>
+            <li><button onclick="navigateToPage('#')">Tops</button></li>
+            <li><button onclick="navigateToPage('Electronic.html')">Jewellery</button></li>
+            <li><button onclick="navigateToPage('#')">Blouse Materials</button></li>
+            <li><button onclick="navigateToPage('#')">Readymade Blouse</button></li>
         </ul>
         <button class="close-modal" id="closeModal">Close</button>
     </div>
@@ -105,6 +107,11 @@
         function navigateToPage(url) {
             window.location.href = url;  // Redirect to the specified URL
         }
+
+        document.getElementById('uploadButton').addEventListener('click', function() {
+            navigateToPage('catalog_upload.html'); // Redirect to the catalog upload page
+        });
+        
 
     </script>
 </body>

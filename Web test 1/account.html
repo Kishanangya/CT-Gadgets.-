@@ -51,10 +51,19 @@
                     <input type="password" placeholder="Confirm Password" required>
                 </div>
                 <button type="submit" class="signup-btn">Sign Up</button>
-            </form>
-            <div class="extra-links">
-                <a href="login.html">Already have an account? Login here</a>
-            </div>
+                <center><div class="or-divider">Or</div></center>
+                <div id="g_id_onload"
+                data-client_id="YOUR_GOOGLE_CLIENT_ID"
+                data-context="signup"
+                data-ux_mode="popup"
+                data-login_uri="http://localhost:5500/login.html"
+                data-auto_prompt="false">
+           </div>
+           <div class="g_id_signin" data-type="standard"></div>
+       </form>
+       <div class="extra-links">
+           <a href="login.html">Already have an account? Login here</a>
+       </div>
         </div>
     </section>
     
@@ -89,7 +98,7 @@
         </div>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
     <script>
         // Handle form submission
         document.getElementById('loginForm').addEventListener('submit', function(event) {
@@ -97,5 +106,23 @@
             // Redirect to the index.html page
             window.location.href = 'login.html';
         });
-    </script></body>
+
+        function handleCredentialResponse(response) {
+          console.log("Encoded JWT ID token: " + response.credential);
+          // Handle the JWT token returned by Google Sign-In
+          // You can send this token to your server for verification and account creation
+      }
+  
+      window.onload = function () {
+          google.accounts.id.initialize({
+              client_id: 'YOUR_GOOGLE_CLIENT_ID',
+              callback: handleCredentialResponse
+          });
+          google.accounts.id.renderButton(
+              document.querySelector('.g_id_signin'),
+              { theme: 'outline', size: 'large' }  // customization options
+          );
+      };
+    </script>
+  </body>
 </html>

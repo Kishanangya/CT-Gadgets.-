@@ -31,9 +31,12 @@
     </header>
 
     <!-- Login Form Modal -->
-    <div class="login-form-container" id="loginForm">
-        <span class="close-btn" onclick="closeLoginForm()">&times;</span>
-        <h2>Login</h2>
+<div class="login-form-container" id="loginForm">
+    <span class="close-btn" onclick="closeLoginForm()">&times;</span>
+    
+    <!-- Login Form -->
+    <div id="loginFormSection">
+        <h2>Happy to See You Again</h2>
         <form action="login_process.html" method="POST">
             <label for="email">Email:</label>
             <input type="email" id="email" name="email" required>
@@ -41,8 +44,30 @@
             <input type="password" id="password" name="password" required>
             <button type="submit" class="submit-btn">Login</button>
         </form><br>
-        <p>Don't have an account? <br><br><a href="seller_form.html">Register for a new account</a></p>
+        <p>Don't have an account? <br><br><a href="#" onclick="showSignUpForm()">Register for a new account</a></p>
     </div>
+
+    <!-- Sign-Up Form -->
+    <div id="signUpFormSection" style="display:none;">
+        <h2>Welcome!</h2>
+        <div class="social-signup">
+            <button class="google-btn">
+                <img src="images/google.png" alt="Google Icon">
+            </button>
+        </div>
+        <center><div class="or-divider">Or</div></center>
+        <form action="signup_process.html" method="POST">
+            <label for="fullName">Full Name:</label>
+            <input type="text" id="fullName" name="fullName" required>
+            <label for="email">Email:</label>
+            <input type="email" id="signUpEmail" name="email" required>
+            <label for="password">Password:</label>
+            <input type="password" id="signUpPassword" name="password" required>
+            <button type="submit" class="submit-btn">Sign Up</button>
+        </form><br>
+        <p>Already have an account? <br><br><a href="#" onclick="showLoginForm()">Login here</a></p>
+    </div>
+</div>
 
     <!-- Main Promotional Section -->
     <section class="promo-section">
@@ -91,7 +116,7 @@
         <div class="footer-container">
             <div class="footer-left">
                 <h2 class="footer-logo">Ifrah'z</h2>
-                <p>Sell your products to crores of customers on Meesho at 0% commission</p>
+                <p>Sell your products to crores of customers on Ifrah'z</p>
                 <a href="seller_form.html" class="start-selling-btn">Start Selling</a>
             </div>
             <div class="footer-links">
@@ -104,8 +129,8 @@
                         <li><a href="#">Shipping & Returns</a></li>
                         <li><a href="#">Grow Your Business</a></li>
                         <li><a href="#">Learning Hub</a></li>
-                        <li><a href="#">Meesho Ads</a></li>
-                        <li><a href="#">Shop Online on Meesho</a></li>
+                        <li><a href="#">Ifrah'z Ads</a></li>
+                        <li><a href="#">Shop Online on Ifrah'z</a></li>
                     </ul>
                 </div>
                 <div class="contact-us">
@@ -139,6 +164,18 @@
                 element.classList.remove("blur-background");
             });
         }
+
+        // Function to display the Sign-Up form and hide the Login form
+function showSignUpForm() {
+    document.getElementById("loginFormSection").style.display = "none";
+    document.getElementById("signUpFormSection").style.display = "block";
+}
+
+// Function to display the Login form and hide the Sign-Up form
+function showLoginForm() {
+    document.getElementById("loginFormSection").style.display = "block";
+    document.getElementById("signUpFormSection").style.display = "none";
+}
     </script>
 </body>
 </html>

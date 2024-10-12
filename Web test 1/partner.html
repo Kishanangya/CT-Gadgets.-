@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Become a Partner</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="partner.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header-logo">
+            <a href="index.html">Ifrah'z</a>
+        </div>
+        <nav class="nav-menu">
+            <a href="#">Solution</a>
+            <a href="#">Customer</a>
+            <a href="#">Pricing</a>
+            <a href="#">Company</a>
+            <a href="#">Support</a>
+            <button class="login-btn" onclick="openLoginForm()">Login</button>
+            <!-- <button type="submit" class="sell-btn">Sign Up</button> -->
+        </nav>
+    </header>
+
+    <!-- Login Form Modal -->
+<div class="login-form-container" id="loginForm">
+    <span class="close-btn" onclick="closeLoginForm()">&times;</span>
+    
+    <!-- Login Form -->
+    <div id="loginFormSection">
+        <h2>Happy to See You Again</h2>
+        <form action="login_process.html" method="POST">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+            <button type="submit" class="submit-btn">Login</button>
+        </form><br>
+        <p>Don't have an account? <br><br><a href="#" onclick="showSignUpForm()">Register for a new account</a></p>
+    </div>
+
+    <!-- Sign-Up Form -->
+    <div id="signUpFormSection" style="display:none;">
+        <h2>Welcome!</h2>
+        <div class="social-signup">
+            <button class="google-btn">
+                <img src="images/google.png" alt="Google Icon">
+            </button>
+        </div>
+        <center><div class="or-divider">Or</div></center>
+        <form action="signup_process.html" method="POST">
+            <label for="fullName">Full Name:</label>
+            <input type="text" id="fullName" name="fullName" required>
+            <label for="email">Email:</label>
+            <input type="email" id="signUpEmail" name="email" required>
+            <label for="password">Password:</label>
+            <input type="password" id="signUpPassword" name="password" required>
+            <button type="submit" class="submit-btn">Sign Up</button>
+        </form><br>
+        <p>Already have an account? <br><br><a href="#" onclick="showLoginForm()">Login here</a></p>
+    </div>
+</div>
+
+    <main>
+<section class="partner-section">
+    <div class="overlay">
+        <div class="content">
+            <h1>Let's Become <span>Partners</span></h1>
+            <p>Become an Ifrah'z partner, for the better (not the worse).</p>
+            <a href="partner_form.html" class="partner-btn">Become partner</a>
+        </div>
+    </div>
+</section>
+
+
+        <!-- Additional Partner Options Section -->
+        <section class="additional-partners">
+            <div class="partner-intro">
+                <h2>So, shall we?</h2>
+                <p>Become a partner of the best-rated solution on the market. Whatever your approach, we certainly have a good reason to work together!</p>
+            </div>
+            <div class="partner-cards">
+                <div class="partner-card">
+                    <h3>Commercial partner</h3>
+                    <p>Let's grow together! Explore business synergies and develop each other.</p>
+                </div>
+                <div class="partner-card">
+                    <h3>Affiliate partner</h3>
+                    <p>Apply for our affiliate program! Benefit from attractive conversion rates and high commissions.</p>
+                </div>
+                <div class="partner-card">
+                    <h3>Integrated partner</h3>
+                    <p>Integrate your solution on Ifrah'z! Let's talk about the potential value of working together.</p>
+                </div>
+                <div class="partner-card">
+                    <h3>SiteW Expert Partner</h3>
+                    <p>Become a SiteW expert! Join our expert program for seamless website creation.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-main">
+            <div class="sitew-section">
+                <h2>Ifrah'z</h2>
+                <!-- <a href="index.html">Ifrah'z</a> -->
+                <p>Alone we can do so little; together we can do so much</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+
+            <!-- Links Section -->
+            <div class="footer-links">
+                <div class="column">
+                    <h4>Solution</h4>
+                    <a href="#">Offers</a>
+                    <a href="#">Templates</a>
+                    <a href="#">Features</a>
+                    <a href="#">Domain name</a>
+                    <a href="#">Professional email address</a>
+                </div>
+                <div class="column">
+                    <h4>Resources</h4>
+                    <a href="#">Blog</a>
+                    <a href="#">Help center</a>
+                    <a href="#">FAQ</a>
+                </div>
+                <div class="column">
+                    <h4>Company</h4>
+                    <a href="#">Our universe</a>
+                    <a href="#">Commitments</a>
+                    <a href="#">News</a>
+                    <a href="#">Press</a>
+                    <a href="#">Contact us</a>
+                </div>
+                <div class="column">
+                    <h4>Useful Links</h4>
+                    <a href="#">Become a partner</a>
+                    <a href="#">Become an expert</a>
+                    <a href="#">Start my project</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer Bottom Section -->
+        <div class="footer-bottom">
+            <div class="legal-links">
+                <a href="#">Home</a>
+                <a href="#">Legal notice</a>
+                <a href="#">Terms</a>
+                <a href="#">Privacy</a>
+            </div>
+            <p>© 2024 IFRAH'Z. All rights reserved.</p>
+        </div>
+    </footer>
+
+
+    <script>
+        function openLoginForm() {
+            document.getElementById("loginForm").style.display = "block";
+            document.querySelectorAll("body > *:not(.login-form-container)").forEach(element => {
+                element.classList.add("blur-background");
+            });
+        }
+        
+        function closeLoginForm() {
+            document.getElementById("loginForm").style.display = "none";
+            document.querySelectorAll("body > *:not(.login-form-container)").forEach(element => {
+                element.classList.remove("blur-background");
+            });
+        }
+
+        // Function to display the Sign-Up form and hide the Login form
+function showSignUpForm() {
+    document.getElementById("loginFormSection").style.display = "none";
+    document.getElementById("signUpFormSection").style.display = "block";
+}
+
+// Function to display the Login form and hide the Sign-Up form
+function showLoginForm() {
+    document.getElementById("loginFormSection").style.display = "block";
+    document.getElementById("signUpFormSection").style.display = "none";
+}
+
+    </script>
+</body>
+</html>

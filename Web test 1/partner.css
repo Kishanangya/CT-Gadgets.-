@@ -1,0 +1,493 @@
+/* General styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f8f8;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 35px 35px;
+    background-color: #045471; 
+    color: #ffffff;
+    border-bottom: 0px solid black; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.header-logo {
+    font-size: 1.7rem;
+    font-weight: bold;
+    color: #fff;
+}
+
+.header-logo a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.nav-menu {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.nav-menu a {
+    display: flex;
+    color: #ffffff;
+    margin-left: 20px;
+    text-decoration: none;
+    font-size: 1.1em;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.nav-menu a:hover {
+    transform: scale(1.2); 
+}
+
+.login-btn, .sell-btn {
+    background-color: #04729a;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 17px;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.login-btn:hover, .sell-btn:hover {
+    transform: scale(1.2);
+}
+
+.login-form-container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 30px 40px;
+    border-radius: 0px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    display: none;
+    width: 300px;
+    max-width: 100%;
+}
+
+.blur-background {
+    filter: blur(5px);
+}
+
+.login-form-container .close-btn {
+    cursor: pointer;
+    font-size: 24px;
+    position: absolute;
+    right: 15px;
+    top: 15px;
+}
+
+.login-form-container h2 {
+    color: #045471;
+    margin-top: 0;
+    text-align: center;
+}
+
+.login-form-container form {
+    display: flex;
+    flex-direction: column;
+}
+
+.login-form-container label {
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+.login-form-container input {
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 5px;
+    border: 2px solid #ccc;
+    width: 100%;
+}
+
+.login-form-container button {
+    width: 100%;
+    padding: 10px;
+    background-color: #04729a;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.login-form-container button:hover {
+    background-color: #045471;
+}
+
+.login-form-container p {
+    margin-top: 15px;
+    text-align: center;
+}
+
+.login-form-container p a {
+    color: #04729a;
+    text-decoration: none;
+}
+
+.login-form-container p a:hover {
+    text-decoration: underline;
+}
+
+.login-form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+    position: relative;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.login-form h2 {
+    margin: 0 0 20px;
+    text-align: center;
+}
+
+.login-form label {
+    display: block;
+    margin: 10px 0 5px;
+}
+
+.login-form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 10px;
+    background-color: #04729a;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+    background-color: #045471;
+}
+
+.social-signup {
+    margin: 20px 0;
+}
+
+.login-form-container .google-btn {
+    background-color: #fff;
+    border: 0px solid #d3d3d3;
+    color: #555;
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.google-btn img {
+    width: 30px;
+    height: 30px;
+    margin-right: 5px;
+}
+
+.login-form-container .google-btn:hover{
+    background-color: #fff;
+}
+
+.or-divider {
+    margin: 15px 0;
+    font-size: 12px;
+    color: #888;
+    position: relative;
+}
+
+.or-divider::before, .or-divider::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    width: 40%;
+    height: 1px;
+    background-color: #ddd;
+}
+
+.or-divider::before {
+    left: 0;
+}
+
+.or-divider::after {
+    right: 0;
+}
+
+/* Partner Section */
+.partner-section {
+    position: relative;
+    background-image: url('images/partner1.jpeg'); 
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    height: 500px;
+    width: 100%; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 250px;
+}
+
+.partner-section .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2); 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.partner-section .content {
+    color: #fff; 
+    text-align: center;
+    padding: 20px;
+}
+
+.partner-section h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.partner-section h1 span {
+    color: #045471; 
+}
+
+.partner-section p {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.partner-section .partner-btn {
+    background-color: #045471;
+    color: #fff;
+    padding: 15px 30px;
+    text-decoration: none;
+    font-size: 18px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.partner-section .partner-btn:hover {
+    background-color: #04729a;
+}
+
+
+/* Additional Partners Section */
+.additional-partners {
+    padding: 80px 10%;
+    background-color: #fff;
+    border-radius: 25px;
+    margin-top: 30px;
+}
+
+.partner-intro h2 {
+    font-size: 36px;
+    color: #045471;
+}
+
+.partner-intro p {
+    font-size: 18px;
+    color: #555;
+    margin: 20px 0;
+}
+
+.partner-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+.partner-card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    max-width: 300px;
+    flex: 1;
+}
+
+.partner-card h3 {
+    font-size: 24px;
+    color: #045471;
+}
+
+.partner-card p {
+    font-size: 16px;
+    color: #666;
+}
+
+/* General footer styles */
+footer {
+    background-color: #045471;
+    padding: 40px 10%;
+    color: #fff;
+    font-family: Arial, sans-serif;
+    height: 275px;
+}
+
+.partner-logos {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.partner-logos h2 {
+    font-size: 24px;
+    color: #fff;
+}
+
+.partner-logos h2 span {
+    color: #045471;
+}
+
+.logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+
+.logo-container img {
+    max-width: 120px;
+    height: auto;
+}
+
+.footer-main {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid #ddd;
+}
+
+.sitew-section {
+    max-width: 300px;
+}
+
+.sitew-section h2{
+    font-size: 35px;
+}
+
+.sitew-section img {
+    width: 120px;
+    height: auto;
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+  }
+  
+  .social-icons a {
+    color: white;
+    font-size: 25px;
+    text-decoration: none;
+  }
+  
+  .social-icons a:hover {
+    color: #d8a7c3; 
+  }
+
+/* .trustpilot {
+    margin-top: 15px;
+    display: flex;
+    align-items: center;
+} */
+
+/* .trustpilot img {
+    width: 80px;
+    margin-right: 10px;
+} */
+
+.footer-links {
+    display: flex;
+    gap: 40px;
+}
+
+.footer-links .column {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-links h4 {
+    font-size: 19px;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.footer-links a {
+    color: #fff;
+    text-decoration: none;
+    margin-bottom: 8px;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #04729a;
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+.legal-links {
+    display: flex;
+    gap: 15px;
+}
+
+.legal-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.language-selection {
+    display: flex;
+    gap: 5px;
+}
+
+.language-selection img {
+    width: 20px;
+    height: auto;
+}
+
+.footer-bottom p {
+    margin: 0;
+}

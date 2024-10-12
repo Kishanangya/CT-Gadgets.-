@@ -23,7 +23,7 @@
 
         h1 {
             text-align: center;
-            color: #333;
+            color: #045471;
             margin-bottom: 20px;
         }
 
@@ -120,7 +120,7 @@
         <h1>Your Orders</h1>
         <div id="cartItems"></div>
         <div id="cartTotal" class="cart-total"></div>
-        <center><a href="#" class="checkout-btn">Checkout</a></center>
+        <center><a href="#" class="checkout-btn">Proceed</a></center>
     </div>
 
     <script>
@@ -203,6 +203,11 @@
 
         // On page load, initialize the cart preview
         document.addEventListener('DOMContentLoaded', updateCartPreview);
+
+        document.querySelector('.checkout-btn').addEventListener('click', function(e) {
+            e.preventDefault();
+            window.location.href = 'payment.html'; 
+        });
     </script>
 </body>
 </html>

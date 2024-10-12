@@ -12,14 +12,22 @@
         <header class="header">
             <h1>Become a Seller on IFRAH'Z</h1>
             <p>Start selling your products to a wide audience today.</p>
+            <form action="catalog.html" method="GET">
+                <button type="submit" class="sell-btn">Catalog</button>
+            </form>
         </header>
 
         <!-- Zoho Form Embed -->
         <section class="form-section">
-            <iframe src="https://forms.zohopublic.in/ifrahzcmaantec1/form/BecomeaSeller2/formperma/18DSe-NUkinHnUP5lFqJOr3EuiGmrFocSmcnqS4k7Qw"
+            <iframe id="zohoForm" src="https://forms.zohopublic.in/ifrahzcmaantec1/form/BecomeaSeller2/formperma/18DSe-NUkinHnUP5lFqJOr3EuiGmrFocSmcnqS4k7Qw"
                 width="100%" height="900" frameborder="0" marginheight="0" marginwidth="0" allowfullscreen>
             </iframe>
         </section>
+
+        <!-- After form submission message (Manual Redirect) -->
+        <div class="redirect-note">
+            <!-- <p>Once you have submitted the form, please <a href="catalog.html">click here</a> to continue to the catalog.</p> -->
+        </div>
 
         <!-- Footer Section -->
         <footer class="footer">
@@ -59,12 +67,10 @@
         </footer>
     </div>
     
-    <!-- Background Script -->
     <script>
-        function onFormSubmitSuccess(userName) {
-            window.location.href = `dashboard.html?name=${encodeURIComponent(userName)}`;
-        }
-        
+        <!-- setTimeout(function() {
+            window.location.href = 'catalog.html';
+        }, 15000);  -->
     </script>
 </body>
 </html>
