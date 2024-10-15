@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ifrah'z</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="navbar">
+    <div class="logo">
+      <a href="index.html">Ifrah'z</a>
+    </div>
+    <div class="search-bar">
+        <i class="fas fa-search search-icon"></i> 
+        <input type="text" placeholder="Search for products, brands and more">
+    </div>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+        <a href="#"> Favorites</a> 
+        <a href="seller.html"> Become a Seller</a>
+        <a href="login.html"><i class="fas fa-user"></i> Login</a>
+        <a href="Cart.html"><i class="fas fa-shopping-cart"></i> Cart</a>  
+      </div>
+    </header>
+
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family:Arial, Helvetica, sans-serif;
+            background: url('images/about.jpg') no-repeat center center/cover; /* Replace with your image path */
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            filter: blur(0px); /* Clear any body-level blurring */
+        }
+
+        /* Blurred Background Overlay */
+        body::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('images/about.jpg') no-repeat center center/cover;
+            filter: blur(5px); /* Apply blur effect */
+            z-index: -1;
+            opacity: 1.2; /* Adjust opacity for overlay effect */
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 40px auto;
+            font-size:16px;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.9); /* Add transparency for readability */
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            position: relative;
+            z-index: 1;
+        }
+
+        header {
+            text-align: center;
+            font-size: 20px;
+        }
+
+        .header-1, .header-2 {
+            background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent background */
+            padding: 15px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .footer {
+            background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent background */
+            position: relative;
+            z-index: 1;
+            padding: 20px 0;
+        }
+
+        .footer-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid #ccc;
+        }
+
+        .social-media a {
+            margin: 0 10px;
+            text-decoration: none;
+            color: #333;
+        }
+    </style>
+</head>
+
+
+    <div class="container">
+        <header>
+            <h1>About Us</h1>
+            <p>Welcome to Ifrah'z™ India!</p>
+        </header>
+    
+        <section class="about-content">
+            
+            <h2>Get to know us</h2>
+            <br>
+            
+            <p>Welcome to Ifrah'z™ India, </p>
+            <br>
+            
+            <p>At Ifrah'z™, our mission is to provide you with the highest quality of products,  </p>
+            <br>
+            
+            <p>We value our customers and strive to create a community that appreciates the goodness of Ifrah'z products.</p>
+            <br>
+            
+            <p>xyz</p>
+            <br>
+        </section>
+    </div>
+    
+
+
+
+    <!-- Footer Section -->
+<footer>
+    <div class="footer-container">
+        <div class="footer-left">
+            <h2>IFRAH'Z</h2>
+            <p>Discover the future of shopping with IFRAH'Z, where innovation meets convenience and style, all at your fingertips.</p>
+        </div>
+  
+        <div class="footer-center">
+            <div class="footer-links footer-column">
+                <a href="#">Insight</a>
+                <a href="#">News</a>
+                <a href="#">Services</a>
+                <a href="#">Investors</a>
+  
+            </div>
+            <div class="footer-links footer-column">
+                <a href="#">Contact Us</a>
+                <a href="#">Privacy Policy</a>
+                <a href="partner.html">Become a Partner</a>
+            </div>
+        </div>
+  
+        <div class="footer-right">
+            <iframe 
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3890.412064418029!2d77.59456271481978!3d12.971598991310643!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae1670d0c1f739%3A0xfed9e978b28279bc!2sBengaluru%2C%20Karnataka!5e0!3m2!1sen!2sin!4v1604498705435!5m2!1sen!2sin"
+              width="400" height="300" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+        </div>
+    </div>
+  
+    <div class="footer-bottom">
+        <p>© 2024 IFRAH'Z. All rights reserved.</p>
+        <div class="social-links">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+        </div>
+    </div>
+  </footer>
+  
+  
+  
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  
+    <script src = "script.js"></script>
+  </body>
+  </html>
