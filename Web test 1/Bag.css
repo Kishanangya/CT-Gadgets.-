@@ -46,7 +46,7 @@ body {
   position: absolute;
   left: 10px; 
   font-size: 1.2em;
-  color: #045471; 
+  color: #000; 
   cursor: pointer;
   transition: color 0.3s ease, transform 0.3s ease; 
 }
