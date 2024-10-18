@@ -22,7 +22,7 @@ body, html {
 .header {
     text-align: center;
     padding: 2rem;
-    background-color: #045471;
+    background-color: #000;
     color: #fff;
     width: 100%;
 }
@@ -44,7 +44,7 @@ body, html {
 
 /* Footer Styling */
 .footer {
-    background-color: #045471;
+    background-color: #000;
     padding: 3rem;
     text-align: center;
 }
@@ -63,7 +63,7 @@ body, html {
 }
 
 .benefit-item {
-    background-color: #045471;
+    background-color: #000;
     border: 0px solid #ddd;
     border-radius: 10px;
     padding: 1.5rem;
@@ -103,7 +103,7 @@ body, html {
 }
 
  .sell-btn {
-    background-color: #04729a;
+    background-color: #ffffff5b;
     color: #fff;
     padding: 10px 20px;
     border: none;
@@ -120,7 +120,7 @@ body, html {
 
 /* General footer styles */
 footer {
-    background-color: #045471;
+    background-color: #000;
     padding: 40px 10%;
     color: #fff;
     font-family: Arial, sans-serif;
@@ -138,7 +138,7 @@ footer {
 }
 
 .partner-logos h2 span {
-    color: #045471;
+    color: #000;
 }
 
 .logo-container {
@@ -224,7 +224,7 @@ footer {
 }
 
 .footer-links a:hover {
-    color: #04729a;
+    color: #ffffff5b;
 }
 
 .footer-bottom {

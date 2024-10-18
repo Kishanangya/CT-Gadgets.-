@@ -205,9 +205,17 @@
         document.addEventListener('DOMContentLoaded', updateCartPreview);
 
         document.querySelector('.checkout-btn').addEventListener('click', function(e) {
-            e.preventDefault();
-            window.location.href = 'payment.html'; 
-        });
+    e.preventDefault();
+    const totalElement = document.getElementById('cartTotal').textContent; 
+    const totalAmount = totalElement.split('₹')[1]; // Extract the numerical part of the total
+    
+    // Save total amount to localStorage
+    localStorage.setItem('totalAmount', totalAmount.trim()); 
+
+    // Redirect to payment page
+    window.location.href = 'payment.html'; 
+});
+
     </script>
 </body>
 </html>

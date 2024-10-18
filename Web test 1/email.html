@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ifrah'z</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <link rel="stylesheet" href="email.css">
+</head>
+
+  <!-- Header -->
+  <header class="navbar">
+    <div class="logo">
+      <a href="index.html">Ifrah'z</a>
+    </div>
+    <div class="search-bar">
+        <i class="fas fa-search search-icon"></i> 
+        <input type="text" placeholder="Search for products, brands and more">
+    </div>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+        <a href="#"> Favorites</a> 
+        <a href="seller.html"> Become Seller</a>
+        <a href="partner.html"> Franchise</a>
+        <a href="login.html"><i class="fas fa-user"></i> Login</a>
+        <a href="Cart.html"><i class="fas fa-shopping-cart"></i> Cart</a>  
+      </div>
+    </header>
+
+    <body>
+    <section class="email-section">
+    <div class="email-section-content">
+        <center><h1>Check your inbox</h1></center>
+        <p>Enter the 6-digit code we have sent to <span id="useremail"></span> the respective e-mail and finish login.</p>
+        <input type="text" id="code" placeholder="6-digit code">
+        <button id="login-btn">Log in</button>
+        <button id="resend-btn">Resend code</button>
+        <button id="different-account">Log in to a different account</button>
+    </div>
+    </section>
+
+    <!-- Footer Section -->
+<footer>
+    <div class="footer-container">
+        <div class="footer-left">
+            <h2>IFRAH'Z</h2>
+            <p>Discover the future of shopping with IFRAH'Z, where innovation meets convenience and style, all at your fingertips.</p>
+        </div>
+  
+        <div class="footer-center">
+            <div class="footer-links footer-column">
+                <a href="#">Insight</a>
+                <a href="#">News</a>
+                <a href="#">Services</a>
+                <a href="#">Investors</a>
+  
+            </div>
+            <div class="footer-links footer-column">
+                <a href="#">About Us</a>
+                <a href="#">Contact Us</a>
+                <a href="#">Privacy Policy</a>
+                <a href="partner.html">Franchise</a>
+            </div>
+        </div>
+  
+        <div class="footer-right">
+            <iframe 
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3890.412064418029!2d77.59456271481978!3d12.971598991310643!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae1670d0c1f739%3A0xfed9e978b28279bc!2sBengaluru%2C%20Karnataka!5e0!3m2!1sen!2sin!4v1604498705435!5m2!1sen!2sin"
+              width="400" height="300" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+        </div>
+    </div>
+  
+    <div class="footer-bottom">
+        <p>© 2024 IFRAH'Z. All rights reserved.</p>
+        <div class="social-links">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+        </div>
+    </div>
+  </footer>
+  
+
+    <script>
+        // You should replace this with the real user email dynamically
+const userEmail = " ";
+document.getElementById("user-email").textContent = userEmail;
+
+document.getElementById("login-btn").addEventListener("click", function() {
+    const code = document.getElementById("code").value;
+    if (code.length === 6) {
+        // Validate the code here (compare with the actual code from the backend)
+        alert("Code verified. Logging in...");
+    } else {
+        alert("Please enter a valid 6-digit code.");
+    }
+});
+
+document.getElementById("resend-btn").addEventListener("click", function() {
+    alert("Resend code requested");
+    // You would call the function to resend the code using Gmail API here
+});
+
+document.getElementById("different-account").addEventListener("click", function() {
+    alert("Redirecting to account login...");
+    // Logic to redirect to different account login page
+});
+
+document.getElementById('login-btn').addEventListener('click', function(event) {
+    event.preventDefault(); // Prevent actual form submission
+    window.location.href = 'index.html';
+});
+
+
+
+    </script>
+    </body>
+    </html>
