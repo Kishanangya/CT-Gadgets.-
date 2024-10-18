@@ -111,15 +111,16 @@ body {
 
 .product-container  {
   display: flex;
-  flex-direction: row; /* Aligns items horizontally */
-  justify-content:left;
-  align-items: center; /* Vertically centers items */
+  flex-direction: row; 
+  justify-content: center; 
+  align-items: center; 
   padding: 30px;
   background-color: #F0EFEB;
   gap: 50px;
   border: 0;
   flex-wrap: wrap;
 }
+
 
 .product {
   width: 300px;
